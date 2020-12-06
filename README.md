@@ -1,4 +1,4 @@
-Swinject
+Unlimint SDK
 ========
 
 ## Requirements
