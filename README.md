@@ -1,7 +1,3 @@
-# <p align="center">
-#  <img src="<>" width="33%">
-# </p>
-
 Swinject
 ========
 
