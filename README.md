@@ -10,7 +10,7 @@ Unlimint SDK
 
 ## Installation
 
-Swinject is available through [CocoaPods](https://cocoapods.org)
+UnlimintSDK is available through [CocoaPods](https://cocoapods.org)
 
 #### Swift 5.x
 

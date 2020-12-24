@@ -7,13 +7,17 @@
 
 import Foundation
 import Moya
+import UnlimintSDK
 
 enum ApiEndpoints: TargetType {
     case mobileToken
 }
 
 extension ApiEndpoints {
-    var baseURL: URL { URL(string: "https://sandbox.cardpay.com/demo-merchant")! }
+    
+    var baseURL: URL {
+        URL(string: "https://sandbox.cardpay.com/demo-merchant")!
+    }
     
     var path: String {
         switch self {

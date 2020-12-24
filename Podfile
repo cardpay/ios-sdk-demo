@@ -5,10 +5,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/cardpay/ios-sdk-podspec.git'
 
 target 'UnlimintSDK-Demo' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for CardPaySDK_DemoShop
   pod 'UnlimintSDK'
 
 end

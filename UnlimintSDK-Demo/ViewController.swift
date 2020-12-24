@@ -13,9 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         Unlimint.shared.environment = .sandbox
-        // Do any additional setup after loading the view.
     }
 
     
@@ -25,9 +24,9 @@ class ViewController: UIViewController {
                 Unlimint
                     .shared
                     .bindNewCardFor(for: mobileToken,
-                                    with: .init(currency: .init(with: "USD"),
-                                                customer: .init(id: "<id>",
-                                                                email: "test@mail.com")),
+                                    with: .init(currency: .init(with: "EUR"),
+                                                customer: .init(id: "123123",
+                                                                email: "test@unlimint.com")),
                                     presentationStyle: .present(self))
             }
         }
@@ -43,14 +42,14 @@ class ViewController: UIViewController {
                                          paymentMethod: "BANKCARD",
                                          customer: .init(homePhone: nil,
                                                          workPhone: nil,
-                                                         email: "test@gmail.com",
+                                                         email: "test@unlimint.com",
                                                          locale: nil),
                                          merchantOrder: .init(description: "<description>", id: "<id>"),
-                                         paymentData: .init(amount: 200,
-                                                            currency: "USD",
+                                         paymentData: .init(amount: 5,
+                                                            currency: "EUR",
                                                             note: nil,
                                                             dynamicDescriptor: nil,
-                                                            transType: "01"),
+                                                            transType: nil),
                                          cardAccount: nil),
                              presentationStyle: .present(self))
             }
@@ -67,15 +66,15 @@ class ViewController: UIViewController {
                                                   paymentMethod: "BANKCARD",
                                                   customer: .init(homePhone: nil,
                                                                   workPhone: nil,
-                                                                  email: "test@gmail.com",
+                                                                  email: "test@unlimint.com",
                                                                   locale: "nil"),
                                                   merchantOrder: .init(description: "<description>",
                                                                        id: "<id>"),
-                                                  paymentData: .init(amount: 200,
+                                                  paymentData: .init(amount: 5,
                                                                      currency: "USD",
                                                                      note: nil,
                                                                      dynamicDescriptor: nil,
-                                                                     transType: "0"),
+                                                                     transType: nil),
                                                   cardAccount: .init(token: "<token>",
                                                                      pan: "<pan>",
                                                                      billingAddress: nil)),
