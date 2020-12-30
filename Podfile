@@ -7,6 +7,6 @@ source 'https://github.com/cardpay/ios-sdk-podspec.git'
 target 'UnlimintSDK-Demo' do
   use_frameworks!
 
-  pod 'UnlimintSDK'
+  pod 'UnlimintSDK', '~> 9999'
 
 end
