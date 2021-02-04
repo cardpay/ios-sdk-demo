@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1604059A06E3565AE96D486 /* Pods_UnlimintSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADDA73E3E80DAB999884143 /* Pods_UnlimintSDK_Demo.framework */; };
+		784386E8492F34958F87E367 /* Pods_UnlimintSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D920A76945AE69621ADC7FF7 /* Pods_UnlimintSDK_Demo.framework */; };
 		EBAB8F9C257674BB0058FA71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9B257674BB0058FA71 /* AppDelegate.swift */; };
 		EBAB8F9E257674BB0058FA71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9D257674BB0058FA71 /* SceneDelegate.swift */; };
 		EBAB8FA0257674BB0058FA71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9F257674BB0058FA71 /* ViewController.swift */; };
@@ -19,8 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C3F5FD16353FFF246FD3935 /* Pods-UnlimintSDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		8ADDA73E3E80DAB999884143 /* Pods_UnlimintSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DFB0DDBE67645DF244F27ED /* Pods-UnlimintSDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		D920A76945AE69621ADC7FF7 /* Pods_UnlimintSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A5E2251CF6A7E1F7A76C9A /* Pods-UnlimintSDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		EBAB8F98257674BB0058FA71 /* UnlimintSDK-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnlimintSDK-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAB8F9B257674BB0058FA71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBAB8F9D257674BB0058FA71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		EBAB8FA9257674BB0058FA71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBAB8FB2257675BC0058FA71 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		EBAB8FBC257676340058FA71 /* AuthorizationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationProvider.swift; sourceTree = "<group>"; };
-		FBAEF8D2A06B71F9A5292C24 /* Pods-UnlimintSDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,28 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1604059A06E3565AE96D486 /* Pods_UnlimintSDK_Demo.framework in Frameworks */,
+				784386E8492F34958F87E367 /* Pods_UnlimintSDK_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70892FBDED2289B195C9EF98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D920A76945AE69621ADC7FF7 /* Pods_UnlimintSDK_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		94CA20BFF06DD2ED143A96B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FBAEF8D2A06B71F9A5292C24 /* Pods-UnlimintSDK-Demo.debug.xcconfig */,
-				3C3F5FD16353FFF246FD3935 /* Pods-UnlimintSDK-Demo.release.xcconfig */,
+				E0A5E2251CF6A7E1F7A76C9A /* Pods-UnlimintSDK-Demo.debug.xcconfig */,
+				4DFB0DDBE67645DF244F27ED /* Pods-UnlimintSDK-Demo.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		CC4F7C8200052A3F46661A6D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8ADDA73E3E80DAB999884143 /* Pods_UnlimintSDK_Demo.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EBAB8F8F257674BA0058FA71 = {
@@ -69,7 +69,7 @@
 				EBAB8F9A257674BB0058FA71 /* UnlimintSDK-Demo */,
 				EBAB8F99257674BB0058FA71 /* Products */,
 				94CA20BFF06DD2ED143A96B3 /* Pods */,
-				CC4F7C8200052A3F46661A6D /* Frameworks */,
+				70892FBDED2289B195C9EF98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,11 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBAB8FAC257674BB0058FA71 /* Build configuration list for PBXNativeTarget "UnlimintSDK-Demo" */;
 			buildPhases = (
-				9E23AB584D046144E5D5D75E /* [CP] Check Pods Manifest.lock */,
+				994360DFAE95E6ADAE3110EA /* [CP] Check Pods Manifest.lock */,
 				EBAB8F94257674BB0058FA71 /* Sources */,
 				EBAB8F95257674BB0058FA71 /* Frameworks */,
 				EBAB8F96257674BB0058FA71 /* Resources */,
-				0DE049A909AEB10C24FFD841 /* [CP] Embed Pods Frameworks */,
+				A2C0B33C79CA9B3E5D43D505 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,24 +173,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DE049A909AEB10C24FFD841 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E23AB584D046144E5D5D75E /* [CP] Check Pods Manifest.lock */ = {
+		994360DFAE95E6ADAE3110EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,6 +193,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2C0B33C79CA9B3E5D43D505 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -367,12 +367,12 @@
 		};
 		EBAB8FAD257674BB0058FA71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBAEF8D2A06B71F9A5292C24 /* Pods-UnlimintSDK-Demo.debug.xcconfig */;
+			baseConfigurationReference = E0A5E2251CF6A7E1F7A76C9A /* Pods-UnlimintSDK-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CZRPTJK8H2;
 				INFOPLIST_FILE = "UnlimintSDK-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -390,12 +390,12 @@
 		};
 		EBAB8FAE257674BB0058FA71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C3F5FD16353FFF246FD3935 /* Pods-UnlimintSDK-Demo.release.xcconfig */;
+			baseConfigurationReference = 4DFB0DDBE67645DF244F27ED /* Pods-UnlimintSDK-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CZRPTJK8H2;
 				INFOPLIST_FILE = "UnlimintSDK-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

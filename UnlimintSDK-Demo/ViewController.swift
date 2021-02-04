@@ -25,8 +25,8 @@ class ViewController: UIViewController {
                     .shared
                     .bindNewCardFor(for: mobileToken,
                                     with: .init(currency: .init(with: "EUR"),
-                                                customer: .init(id: "123123",
-                                                                email: "test@unlimint.com")),
+                                                customer: .init(id: "test",
+                                                                email: "customer@mail.com")),
                                     presentationStyle: .present(self))
             }
         }
