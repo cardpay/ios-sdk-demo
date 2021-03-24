@@ -1,62 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OEg-QH-zgC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Unlimint SDK-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnlimintSDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="UnlimintSDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MpQ-fB-wqE">
-                                <rect key="frame" x="139.5" y="393" width="135" height="110"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxZ-nn-h6f">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTP-Qi-nZ2">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                        <state key="normal" title="Bind"/>
-                                        <connections>
-                                            <action selector="onBind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ouj-aa-6OT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNC-87-b9G">
-                                        <rect key="frame" x="0.0" y="40" width="135" height="30"/>
-                                        <state key="normal" title="Payment "/>
-                                        <connections>
-                                            <action selector="onPayment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mFZ-Q9-sdx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCS-Kh-fNv" userLabel="Payment with token">
-                                        <rect key="frame" x="0.0" y="80" width="135" height="30"/>
-                                        <state key="normal" title="Payment with token"/>
-                                        <connections>
-                                            <action selector="onTokenPayment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZR-nK-lY7"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Lz-Uw-Jnb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="509"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking Rick &amp; Morty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBb-AM-hau">
+                                                <rect key="frame" x="16" y="355" width="382" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A very bright comet passing near the Earth. Circulation period — 112 years" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15B-AM-OGc">
+                                                <rect key="frame" x="16" y="391" width="382" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQQ-1k-noc">
+                                                <rect key="frame" x="16" y="459" width="37" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="352.00 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-8j-Naf">
+                                                <rect key="frame" x="65" y="459" width="333" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_rickandmortyxx" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-cx-dxR">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="331"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2fT-cx-dxR" secondAttribute="height" multiplier="1:0.8" id="Uke-Gg-lb7"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="u3K-8j-Naf" firstAttribute="top" secondItem="EQQ-1k-noc" secondAttribute="top" id="84l-gm-tDN"/>
+                                            <constraint firstItem="15B-AM-OGc" firstAttribute="leading" secondItem="dBb-AM-hau" secondAttribute="leading" id="BbI-1p-m6l"/>
+                                            <constraint firstItem="2fT-cx-dxR" firstAttribute="top" secondItem="2Lz-Uw-Jnb" secondAttribute="top" id="Bg3-Xk-MiF"/>
+                                            <constraint firstAttribute="trailing" secondItem="2fT-cx-dxR" secondAttribute="trailing" id="CVR-Tt-Ujs"/>
+                                            <constraint firstAttribute="bottom" secondItem="EQQ-1k-noc" secondAttribute="bottom" constant="32" id="GxN-lz-3iH"/>
+                                            <constraint firstItem="15B-AM-OGc" firstAttribute="trailing" secondItem="dBb-AM-hau" secondAttribute="trailing" id="KP0-7k-EYD"/>
+                                            <constraint firstItem="15B-AM-OGc" firstAttribute="top" secondItem="dBb-AM-hau" secondAttribute="bottom" constant="12" id="LBF-8Y-kzM"/>
+                                            <constraint firstItem="u3K-8j-Naf" firstAttribute="bottom" secondItem="EQQ-1k-noc" secondAttribute="bottom" id="LlX-zg-03O"/>
+                                            <constraint firstItem="dBb-AM-hau" firstAttribute="top" secondItem="2fT-cx-dxR" secondAttribute="bottom" constant="24" id="UTm-BH-aUG"/>
+                                            <constraint firstItem="dBb-AM-hau" firstAttribute="leading" secondItem="2Lz-Uw-Jnb" secondAttribute="leading" constant="16" id="WXH-pj-sFv"/>
+                                            <constraint firstItem="EQQ-1k-noc" firstAttribute="top" secondItem="15B-AM-OGc" secondAttribute="bottom" constant="32" id="dXS-OR-up2"/>
+                                            <constraint firstItem="u3K-8j-Naf" firstAttribute="trailing" secondItem="15B-AM-OGc" secondAttribute="trailing" id="oOn-0E-9tn"/>
+                                            <constraint firstItem="u3K-8j-Naf" firstAttribute="leading" secondItem="EQQ-1k-noc" secondAttribute="trailing" constant="12" id="oaa-0p-wx6"/>
+                                            <constraint firstItem="EQQ-1k-noc" firstAttribute="leading" secondItem="15B-AM-OGc" secondAttribute="leading" id="pcW-JF-MBD"/>
+                                            <constraint firstItem="2fT-cx-dxR" firstAttribute="leading" secondItem="2Lz-Uw-Jnb" secondAttribute="leading" id="uU0-dl-GX1"/>
+                                            <constraint firstAttribute="trailing" secondItem="dBb-AM-hau" secondAttribute="trailing" constant="16" id="yUX-1T-VTS"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="2Lz-Uw-Jnb" firstAttribute="trailing" secondItem="7AN-32-Ngz" secondAttribute="trailing" id="6S6-IU-qxX"/>
+                                    <constraint firstItem="2Lz-Uw-Jnb" firstAttribute="width" secondItem="OdP-56-4Ki" secondAttribute="width" id="86w-AL-ASG"/>
+                                    <constraint firstItem="2Lz-Uw-Jnb" firstAttribute="top" secondItem="7AN-32-Ngz" secondAttribute="top" id="aqX-BX-AwH"/>
+                                    <constraint firstItem="2Lz-Uw-Jnb" firstAttribute="leading" secondItem="7AN-32-Ngz" secondAttribute="leading" id="cwq-SG-lNb"/>
+                                    <constraint firstItem="2Lz-Uw-Jnb" firstAttribute="bottom" secondItem="7AN-32-Ngz" secondAttribute="bottom" id="hmQ-G0-7TE"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7AN-32-Ngz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="OdP-56-4Ki"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdj-GG-isx">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KpX-gt-gnp"/>
+                                </constraints>
+                                <state key="normal" title="Link a bank card"/>
+                                <connections>
+                                    <action selector="onBind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Bn-1F-rsn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-sA-qTj">
+                                <rect key="frame" x="16" y="750" width="382" height="44"/>
+                                <state key="normal" title="Buy"/>
+                                <connections>
+                                    <action selector="onPayment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2QC-hg-91A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MpQ-fB-wqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vJj-S2-BWB"/>
-                            <constraint firstItem="MpQ-fB-wqE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wjr-85-Dg4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rdj-GG-isx" secondAttribute="trailing" constant="16" id="34Q-RQ-1JN"/>
+                            <constraint firstItem="ik0-sA-qTj" firstAttribute="leading" secondItem="rdj-GG-isx" secondAttribute="leading" id="DpB-u2-mqb"/>
+                            <constraint firstItem="ik0-sA-qTj" firstAttribute="height" secondItem="rdj-GG-isx" secondAttribute="height" id="HYh-oM-MvC"/>
+                            <constraint firstItem="rdj-GG-isx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Hfp-d6-Foj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gxZ-nn-h6f" secondAttribute="trailing" id="NKn-9W-OaG"/>
+                            <constraint firstItem="gxZ-nn-h6f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SeR-lq-4Em"/>
+                            <constraint firstItem="ik0-sA-qTj" firstAttribute="trailing" secondItem="rdj-GG-isx" secondAttribute="trailing" id="WZ3-SC-8e3"/>
+                            <constraint firstItem="rdj-GG-isx" firstAttribute="top" secondItem="ik0-sA-qTj" secondAttribute="bottom" constant="8" id="YU9-e3-plK"/>
+                            <constraint firstItem="gxZ-nn-h6f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YvA-Gd-NUh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rdj-GG-isx" secondAttribute="bottom" constant="16" id="dHm-lH-mDT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gxZ-nn-h6f" secondAttribute="bottom" id="or3-Dy-FIy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Unlimint SDK" id="2eS-cb-TI2"/>
+                    <connections>
+                        <outlet property="linkButton" destination="rdj-GG-isx" id="7Uo-hg-AVn"/>
+                        <outlet property="paymentButton" destination="ik0-sA-qTj" id="Hit-gs-SkU"/>
+                        <outlet property="scrollView" destination="gxZ-nn-h6f" id="NNf-Pf-hfs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="89"/>
+            <point key="canvasLocation" x="-110.14492753623189" y="857.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BG6-Il-8Nz">
+            <objects>
+                <navigationController id="OEg-QH-zgC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c6e-kO-w2g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="60v-EM-WQP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPn-o8-usf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-952" y="858"/>
         </scene>
     </scenes>
     <resources>
+        <image name="thumb_rickandmortyxx" width="1920" height="1080"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

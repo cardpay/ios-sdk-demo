@@ -14,9 +14,7 @@ class AuthorizationProvider {
     
     // MARK: Private properties
     private let network: MoyaProvider<ApiEndpoints> = .init(callbackQueue: .global(qos: .utility),
-                                                            plugins: [
-                                                                NetworkLoggerPlugin()
-                                                            ])
+                                                            plugins: [])
     private var competionClosure: StringClosure?
     
     deinit {

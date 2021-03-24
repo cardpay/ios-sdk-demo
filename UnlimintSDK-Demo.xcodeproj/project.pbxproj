@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		784386E8492F34958F87E367 /* Pods_UnlimintSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D920A76945AE69621ADC7FF7 /* Pods_UnlimintSDK_Demo.framework */; };
+		177F777B29D6AE9C05909B66 /* Pods_UnlimintSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088D4A1ED4A5DCE7AF7D2D94 /* Pods_UnlimintSDK_Demo.framework */; };
+		EB0403332608E06B009142F0 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0403322608E06B009142F0 /* ButtonStyles.swift */; };
+		EB0403382608EE72009142F0 /* PaymentMethodsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0403372608EE72009142F0 /* PaymentMethodsController.swift */; };
+		EB4B50052609D2CC00050DFC /* PaymentTokenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B50042609D2CC00050DFC /* PaymentTokenController.swift */; };
+		EB4B50092609D38B00050DFC /* UnlimintTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B50082609D38B00050DFC /* UnlimintTextField.swift */; };
+		EB4B50192609E4CC00050DFC /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B50182609E4CC00050DFC /* InsetTextField.swift */; };
 		EBAB8F9C257674BB0058FA71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9B257674BB0058FA71 /* AppDelegate.swift */; };
 		EBAB8F9E257674BB0058FA71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9D257674BB0058FA71 /* SceneDelegate.swift */; };
-		EBAB8FA0257674BB0058FA71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9F257674BB0058FA71 /* ViewController.swift */; };
+		EBAB8FA0257674BB0058FA71 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAB8F9F257674BB0058FA71 /* MainController.swift */; };
 		EBAB8FA3257674BB0058FA71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAB8FA1257674BB0058FA71 /* Main.storyboard */; };
 		EBAB8FA5257674BB0058FA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBAB8FA4257674BB0058FA71 /* Assets.xcassets */; };
 		EBAB8FA8257674BB0058FA71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAB8FA6257674BB0058FA71 /* LaunchScreen.storyboard */; };
@@ -19,13 +24,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4DFB0DDBE67645DF244F27ED /* Pods-UnlimintSDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		D920A76945AE69621ADC7FF7 /* Pods_UnlimintSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0A5E2251CF6A7E1F7A76C9A /* Pods-UnlimintSDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		088D4A1ED4A5DCE7AF7D2D94 /* Pods_UnlimintSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE01139A77B41C1215ECC9C /* Pods-UnlimintSDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		C86130D8EFCF332BB2E438E4 /* Pods-UnlimintSDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0403322608E06B009142F0 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		EB0403372608EE72009142F0 /* PaymentMethodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsController.swift; sourceTree = "<group>"; };
+		EB4B50042609D2CC00050DFC /* PaymentTokenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTokenController.swift; sourceTree = "<group>"; };
+		EB4B50082609D38B00050DFC /* UnlimintTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintTextField.swift; sourceTree = "<group>"; };
+		EB4B50182609E4CC00050DFC /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		EBAB8F98257674BB0058FA71 /* UnlimintSDK-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnlimintSDK-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAB8F9B257674BB0058FA71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBAB8F9D257674BB0058FA71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBAB8F9F257674BB0058FA71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBAB8F9F257674BB0058FA71 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		EBAB8FA2257674BB0058FA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBAB8FA4257674BB0058FA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBAB8FA7257674BB0058FA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,28 +49,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784386E8492F34958F87E367 /* Pods_UnlimintSDK_Demo.framework in Frameworks */,
+				177F777B29D6AE9C05909B66 /* Pods_UnlimintSDK_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70892FBDED2289B195C9EF98 /* Frameworks */ = {
+		94CA20BFF06DD2ED143A96B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D920A76945AE69621ADC7FF7 /* Pods_UnlimintSDK_Demo.framework */,
+				C86130D8EFCF332BB2E438E4 /* Pods-UnlimintSDK-Demo.debug.xcconfig */,
+				6DE01139A77B41C1215ECC9C /* Pods-UnlimintSDK-Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E137AF66AA1839A0F2543B4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				088D4A1ED4A5DCE7AF7D2D94 /* Pods_UnlimintSDK_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		94CA20BFF06DD2ED143A96B3 /* Pods */ = {
+		EB0403302608DFF0009142F0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5E2251CF6A7E1F7A76C9A /* Pods-UnlimintSDK-Demo.debug.xcconfig */,
-				4DFB0DDBE67645DF244F27ED /* Pods-UnlimintSDK-Demo.release.xcconfig */,
+				EB0403312608E023009142F0 /* Style */,
 			);
-			path = Pods;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		EB0403312608E023009142F0 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				EB0403322608E06B009142F0 /* ButtonStyles.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		EB0403362608EE4B009142F0 /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				EBAB8F9F257674BB0058FA71 /* MainController.swift */,
+				EB0403372608EE72009142F0 /* PaymentMethodsController.swift */,
+				EB4B50042609D2CC00050DFC /* PaymentTokenController.swift */,
+			);
+			path = ViewControlles;
+			sourceTree = "<group>";
+		};
+		EB4B50072609D31A00050DFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB4B50082609D38B00050DFC /* UnlimintTextField.swift */,
+				EB4B50182609E4CC00050DFC /* InsetTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EBAB8F8F257674BA0058FA71 = {
@@ -69,7 +114,7 @@
 				EBAB8F9A257674BB0058FA71 /* UnlimintSDK-Demo */,
 				EBAB8F99257674BB0058FA71 /* Products */,
 				94CA20BFF06DD2ED143A96B3 /* Pods */,
-				70892FBDED2289B195C9EF98 /* Frameworks */,
+				E137AF66AA1839A0F2543B4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,10 +129,12 @@
 		EBAB8F9A257674BB0058FA71 /* UnlimintSDK-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EB4B50072609D31A00050DFC /* View */,
+				EB0403362608EE4B009142F0 /* ViewControlles */,
+				EB0403302608DFF0009142F0 /* Utility */,
 				EBAB8FB1257675A90058FA71 /* Network */,
 				EBAB8F9B257674BB0058FA71 /* AppDelegate.swift */,
 				EBAB8F9D257674BB0058FA71 /* SceneDelegate.swift */,
-				EBAB8F9F257674BB0058FA71 /* ViewController.swift */,
 				EBAB8FA1257674BB0058FA71 /* Main.storyboard */,
 				EBAB8FA4257674BB0058FA71 /* Assets.xcassets */,
 				EBAB8FA6257674BB0058FA71 /* LaunchScreen.storyboard */,
@@ -112,11 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBAB8FAC257674BB0058FA71 /* Build configuration list for PBXNativeTarget "UnlimintSDK-Demo" */;
 			buildPhases = (
-				994360DFAE95E6ADAE3110EA /* [CP] Check Pods Manifest.lock */,
+				E8323A6EDA5069930256A6BE /* [CP] Check Pods Manifest.lock */,
 				EBAB8F94257674BB0058FA71 /* Sources */,
 				EBAB8F95257674BB0058FA71 /* Frameworks */,
 				EBAB8F96257674BB0058FA71 /* Resources */,
-				A2C0B33C79CA9B3E5D43D505 /* [CP] Embed Pods Frameworks */,
+				C68708F3D47A4FF1846CBC5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,7 +220,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		994360DFAE95E6ADAE3110EA /* [CP] Check Pods Manifest.lock */ = {
+		C68708F3D47A4FF1846CBC5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8323A6EDA5069930256A6BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,23 +259,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2C0B33C79CA9B3E5D43D505 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,9 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0403382608EE72009142F0 /* PaymentMethodsController.swift in Sources */,
+				EB4B50192609E4CC00050DFC /* InsetTextField.swift in Sources */,
 				EBAB8FBD257676340058FA71 /* AuthorizationProvider.swift in Sources */,
-				EBAB8FA0257674BB0058FA71 /* ViewController.swift in Sources */,
+				EB4B50052609D2CC00050DFC /* PaymentTokenController.swift in Sources */,
+				EB0403332608E06B009142F0 /* ButtonStyles.swift in Sources */,
+				EBAB8FA0257674BB0058FA71 /* MainController.swift in Sources */,
 				EBAB8F9C257674BB0058FA71 /* AppDelegate.swift in Sources */,
+				EB4B50092609D38B00050DFC /* UnlimintTextField.swift in Sources */,
 				EBAB8FB3257675BC0058FA71 /* Endpoints.swift in Sources */,
 				EBAB8F9E257674BB0058FA71 /* SceneDelegate.swift in Sources */,
 			);
@@ -367,7 +419,7 @@
 		};
 		EBAB8FAD257674BB0058FA71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0A5E2251CF6A7E1F7A76C9A /* Pods-UnlimintSDK-Demo.debug.xcconfig */;
+			baseConfigurationReference = C86130D8EFCF332BB2E438E4 /* Pods-UnlimintSDK-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,7 +442,7 @@
 		};
 		EBAB8FAE257674BB0058FA71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DFB0DDBE67645DF244F27ED /* Pods-UnlimintSDK-Demo.release.xcconfig */;
+			baseConfigurationReference = 6DE01139A77B41C1215ECC9C /* Pods-UnlimintSDK-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
