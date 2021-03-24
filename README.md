@@ -26,6 +26,19 @@ target 'UnlimintSDK-Demo' do
   pod 'UnlimintSDK'
 
 end
+
+unlimintXCFramework = ['Alamofire', 'Moya', 'Swinject', 'UnlimintSDK']
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if unlimintXCFramework.include? "#{target}"
+            target.build_configurations.each do |config|
+                config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+            end
+        end
+    end
+end
+
 ```
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
