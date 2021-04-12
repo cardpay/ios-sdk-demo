@@ -34,7 +34,7 @@ class PaymentMethodsController: UIViewController {
 
 private extension PaymentMethodsController {
     func setup() {
-        title = "Payment methods"
+        title = nil
         view.backgroundColor = .white
 
         setupTableView()
