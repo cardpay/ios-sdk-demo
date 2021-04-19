@@ -46,7 +46,7 @@ Then run `pod install` command. For details of the installation and usage of Coc
 ## Documentation
 
 - [Technical documents](./Docs).
-- [Code documentation](<./Code Documentation>).
+- [Code documentation](<./Code Documentation/Home.md>).
 
 ## Contribution Guide
 
