@@ -1,6 +1,6 @@
 # Types
 
-  - [BillingAddress](./BillingAddress)
+  - [BillingAddress](./BillingAddress.md)
   - [BindingCustomer](./BindingCustomer)
   - [BindingMethodData](./BindingMethodData)
   - [BindingMethodData.MerchantOrder](./BindingMethodData_MerchantOrder)
