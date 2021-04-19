@@ -13,6 +13,7 @@ class PaymentMethodsController: UIViewController {
     enum Items: String, CaseIterable {
         case payment = "Payment"
         case paymentToken = "Payment token"
+        case payPal = "PayPal"
     }
 
     // MARK: UI views
@@ -47,6 +48,7 @@ private extension PaymentMethodsController {
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.payment.rawValue)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.paymentToken.rawValue)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.payPal.rawValue)
 
         view.addSubview(tableView)
 
@@ -89,7 +91,7 @@ extension PaymentMethodsController: UITableViewDelegate {
         case .payment:
             authorizationProvider.setup { mobileToken in
                 DispatchQueue.main.async {
-                    Unlimint
+                     Unlimint
                         .shared
                         .payment(for: mobileToken,
                                  with: .init(with: "<Merchant>",
@@ -111,6 +113,27 @@ extension PaymentMethodsController: UITableViewDelegate {
 
         case .paymentToken:
             navigationController?.pushViewController(PaymentTokenController(), animated: true)
+
+        case .payPal:
+            authorizationProvider.setup { mobileToken in
+                DispatchQueue.main.async {
+                    Unlimint
+                        .shared
+                        .paypalPayment(for: mobileToken,
+                                       with: .init(merchantName: "<Merchant>",
+                                                   merchantOrder: .init(description: "<description>",
+                                                                        id: "<id>"),
+                                                   paymentMethod: "PAYPAL",
+                                                   paymentData: .init(amount: 5,
+                                                                      currency: "EUR",
+                                                                      note: nil,
+                                                                      dynamicDescriptor: nil,
+                                                                      transType: nil),
+                                                   customer: .init(email: "test@unlimint.com")),
+                                       presentationStyle: .present(self))
+                }
+            }
+
         }
     }
 }

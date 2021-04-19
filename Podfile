@@ -9,7 +9,7 @@ use_frameworks!
 
 target 'UnlimintSDK-Demo' do
 
-  pod 'UnlimintSDK', '~> 1.5'
+  pod 'UnlimintSDK', '~> 1.6.0'
 
 end
 
