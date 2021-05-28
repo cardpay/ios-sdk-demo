@@ -17,7 +17,7 @@ UnlimintSDK is available through [CocoaPods](https://cocoapods.org)
 #### Swift 5.x
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
+
 source 'https://github.com/cardpay/ios-sdk-podspec.git'
 
 target 'UnlimintSDK-Demo' do
@@ -25,20 +25,8 @@ target 'UnlimintSDK-Demo' do
   use_frameworks!
 
   # Pods for CardPaySDK_DemoShop
-  pod 'UnlimintSDK'
+  pod 'UnlimintSDK_UI'
 
-end
-
-unlimintXCFramework = ['Alamofire', 'Moya', 'Swinject', 'UnlimintSDK']
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        if unlimintXCFramework.include? "#{target}"
-            target.build_configurations.each do |config|
-                config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-            end
-        end
-    end
 end
 
 ```
