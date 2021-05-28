@@ -1,6 +1,8 @@
 Unlimint SDK
 ========
 
+[Download to TestFlight](https://testflight.apple.com/join/1hfthfjp)
+
 ## Requirements
 
 - iOS 11.0+
