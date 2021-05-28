@@ -18,14 +18,15 @@ UnlimintSDK is available through [CocoaPods](https://cocoapods.org)
 
 ```ruby
 
+source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/cardpay/ios-sdk-podspec.git'
 
-target 'UnlimintSDK-Demo' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+platform :ios, '11'
+use_frameworks!
 
-  # Pods for CardPaySDK_DemoShop
-  pod 'UnlimintSDK_UI'
+target 'UnlimintSDK-Demo' do
+
+  pod 'UnlimintSDK_UI', '~> 1.7'
 
 end
 
