@@ -6,13 +6,14 @@
 //
 
 import UIKit
-import UnlimintSDK
+import UnlimintSDK_UI
 
 class PaymentMethodsController: UIViewController {
 
     enum Items: String, CaseIterable {
-        case payment = "Payment"
-        case paymentToken = "Payment token"
+        case payment = "Bank card"
+        case customeCard = "4000 ... 0002"
+        case paymentToken = "Bank card token"
         case payPal = "PayPal"
     }
 
@@ -49,6 +50,7 @@ private extension PaymentMethodsController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.payment.rawValue)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.paymentToken.rawValue)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.payPal.rawValue)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Items.customeCard.rawValue)
 
         view.addSubview(tableView)
 
@@ -134,6 +136,8 @@ extension PaymentMethodsController: UITableViewDelegate {
                 }
             }
 
+        default:
+            fatalError()
         }
     }
 }

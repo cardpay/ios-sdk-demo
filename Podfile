@@ -9,11 +9,11 @@ use_frameworks!
 
 target 'UnlimintSDK-Demo' do
 
-  pod 'UnlimintSDK', '~> 1.6.0'
+  pod 'UnlimintSDK_UI', '~> 1.7'
 
 end
 
-unlimintXCFramework = ['Alamofire', 'Moya', 'Swinject', 'UnlimintSDK']
+unlimintXCFramework = ['Alamofire', 'Moya', 'Swinject', 'UnlimintSDK_Core', 'UnlimintSDK_UI']
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

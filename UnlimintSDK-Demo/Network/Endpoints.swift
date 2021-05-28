@@ -7,7 +7,8 @@
 
 import Foundation
 import Moya
-import UnlimintSDK
+import UnlimintSDK_UI
+import UnlimintSDK_Core
 
 enum ApiEndpoints: TargetType {
     case mobileToken

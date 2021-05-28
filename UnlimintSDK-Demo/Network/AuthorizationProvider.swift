@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UnlimintSDK
+import UnlimintSDK_UI
 import Moya
 
 class AuthorizationProvider {
@@ -37,7 +37,7 @@ private extension AuthorizationProvider {
                 let data = response.data
                 let json = try? (JSONSerialization.jsonObject(with: data, options: []) as! [String: Any])
                 competionClosure?(json!["token"] as! String)
-                
+
             case let .failure(error):
                 assertionFailure(error.localizedDescription)
             }

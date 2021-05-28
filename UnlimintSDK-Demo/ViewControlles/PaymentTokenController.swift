@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UnlimintSDK
+import UnlimintSDK_UI
 
 class PaymentTokenController: UIViewController {
     // MARK: UI views
