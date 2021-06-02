@@ -1,65 +1,65 @@
 # Types
 
-  - [BillingAddress](/BillingAddress.md)
-  - [BindingCustomer](/BindingCustomer.md):
+  - [BillingAddress](./BillingAddress.md)
+  - [BindingCustomer](./BindingCustomer.md):
     Binding customer data model
-  - [BindingMethodData](/BindingMethodData.md):
+  - [BindingMethodData](./BindingMethodData.md):
     Binding method data model
-  - [BindingMethodData.MerchantOrder](/BindingMethodData_MerchantOrder.md)
-  - [BindingResultModel](/BindingResultModel.md):
+  - [BindingMethodData.MerchantOrder](./BindingMethodData_MerchantOrder.md)
+  - [BindingResultModel](./BindingResultModel.md):
     Binding data model
-  - [CheckCardAccount](/CheckCardAccount.md):
+  - [CheckCardAccount](./CheckCardAccount.md):
     Check card account data model
-  - [Currency](/Currency.md):
+  - [Currency](./Currency.md):
     Currency data model
-  - [PaymentCustomer](/PaymentCustomer.md):
+  - [PaymentCustomer](./PaymentCustomer.md):
     Customer data model
-  - [ShippingAddress](/ShippingAddress.md):
+  - [ShippingAddress](./ShippingAddress.md):
     Shipping address data model
-  - [Item](/Item.md):
+  - [Item](./Item.md):
     Item data model
-  - [PaymentMerchantOrder](/PaymentMerchantOrder.md):
+  - [PaymentMerchantOrder](./PaymentMerchantOrder.md):
     Payment merchant order data model
-  - [PaymentData](/PaymentData.md):
+  - [PaymentData](./PaymentData.md):
     Payment data model
-  - [PaymentResultModel](/PaymentResultModel.md):
+  - [PaymentResultModel](./PaymentResultModel.md):
     Data model
-  - [PaymentTokenMethodData](/PaymentTokenMethodData.md):
+  - [PaymentTokenMethodData](./PaymentTokenMethodData.md):
     Data model
-  - [PaymentTokenMethodData.CardAccount](/PaymentTokenMethodData_CardAccount.md):
+  - [PaymentTokenMethodData.CardAccount](./PaymentTokenMethodData_CardAccount.md):
     Data model
-  - [PaymentMethodData](/PaymentMethodData.md):
+  - [PaymentMethodData](./PaymentMethodData.md):
     Data model
-  - [PaymentMethodData.CardAccount](/PaymentMethodData_CardAccount.md):
+  - [PaymentMethodData.CardAccount](./PaymentMethodData_CardAccount.md):
     Data model
-  - [PaypalPaymentCustomer](/PaypalPaymentCustomer.md):
+  - [PaypalPaymentCustomer](./PaypalPaymentCustomer.md):
     Data model
-  - [PaypalPaymentMethodData](/PaypalPaymentMethodData.md):
+  - [PaypalPaymentMethodData](./PaypalPaymentMethodData.md):
     Data model
-  - [PaypalResultModel](/PaypalResultModel.md):
+  - [PaypalResultModel](./PaypalResultModel.md):
     Data model
-  - [CardPaymentRequisites](/CardPaymentRequisites.md):
+  - [CardPaymentRequisites](./CardPaymentRequisites.md):
     Data model, for transmitting card details
-  - [CardRequisites](/CardRequisites.md):
+  - [CardRequisites](./CardRequisites.md):
     Data model, for transmitting card details
-  - [PaypalRequisites](/PaypalRequisites.md):
+  - [PaypalRequisites](./PaypalRequisites.md):
     Data model, for PayPal method
-  - [TokenPaymentRequisites](/TokenPaymentRequisites.md):
+  - [TokenPaymentRequisites](./TokenPaymentRequisites.md):
     Data model, for payment token method
-  - [UnlimintErrors](/UnlimintErrors.md)
-  - [WebNavigationResults](/WebNavigationResults.md)
-  - [Environments](/Environments.md):
+  - [UnlimintErrors](./UnlimintErrors.md)
+  - [WebNavigationResults](./WebNavigationResults.md)
+  - [Environments](./Environments.md):
     List of environments
-  - [BindingCardDomain](/BindingCardDomain.md):
+  - [BindingCardDomain](./BindingCardDomain.md):
     Binding bank card
-  - [PayPalDomain](/PayPalDomain.md):
+  - [PayPalDomain](./PayPalDomain.md):
     Payment with PayPal
-  - [PaymentCardDomain](/PaymentCardDomain.md):
+  - [PaymentCardDomain](./PaymentCardDomain.md):
     Pay with bank card or bank card token
-  - [PaymentCardDomain.PayTypes](/PaymentCardDomain_PayTypes.md):
+  - [PaymentCardDomain.PayTypes](./PaymentCardDomain_PayTypes.md):
     Payment variants for methods
 
 # Protocols
 
-  - [Apply](/Apply.md):
+  - [Apply](./Apply.md):
     A simple and useful utility for object configuration
