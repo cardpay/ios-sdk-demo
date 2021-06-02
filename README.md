@@ -37,7 +37,9 @@ Then run `pod install` command. For details of the installation and usage of Coc
 ## Documentation
 
 - [Technical documents](./Docs).
-- [Code documentation](<./Code Documentation/Home.md>).
+
+- [UnlimintSDK-Core documentation](<./Code Documentation/UnlimintSDK-Core/Home.md>).
+- [UnlimintSDK-UI documentation](<./Code Documentation/UnlimintSDK-UI/Home.md>).
 
 ## Contribution Guide
 
