@@ -12,6 +12,7 @@
   - [Theme](/Theme)
   - [Unlimint](/Unlimint)
   - [Unlimint.NotificationKeys](/Unlimint.NotificationKeys)
+  - [Unlimint.PaymentMethods](/Unlimint.PaymentMethods)
   - [ViewControllerStyle](/ViewControllerStyle)
 
 </details>

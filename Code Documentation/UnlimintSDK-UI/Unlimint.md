@@ -32,34 +32,24 @@ var environment: Environments
 
 ## Methods
 
-### `bindNewCardFor(for:with:presentationStyle:)`
+### `bind(for:with:)`
 
 Use this method for binding card.
 
 ``` swift
-func bindNewCardFor(for mobileToken: String, with data: BindingMethodData, presentationStyle style: PresentationStyle)
+func bind(for mobileToken: String, with data: BindingMethodData)
 ```
 
-### `payment(for:with:presentationStyle:)`
+### `payment(for:with:)`
 
 Use this method for payment.
 
 ``` swift
-func payment(for mobileToken: String, with data: PaymentMethodData, presentationStyle style: PresentationStyle)
+func payment(for mobileToken: String, with methods: [PaymentMethods])
 ```
 
-### `paymentWithToken(for:with:presentationStyle:)`
-
-Use this method for payment.
+### `present(_:)`
 
 ``` swift
-func paymentWithToken(for mobileToken: String, with data: PaymentTokenMethodData, presentationStyle style: PresentationStyle)
-```
-
-### `paypalPayment(for:with:presentationStyle:)`
-
-Use this method for paypal payment.
-
-``` swift
-func paypalPayment(for mobileToken: String, with data: PaypalPaymentMethodData, presentationStyle style: PresentationStyle)
+private func present(_ route: MainCoordinator.Route)
 ```

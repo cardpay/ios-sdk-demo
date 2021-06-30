@@ -1,15 +1,16 @@
 # Types
 
-  - [Methods](./Methods.md)
-  - [MainButtonStyle](./MainButtonStyle.md)
-  - [NavigationBarStyle](./NavigationBarStyle.md)
-  - [NavigationBarStyle.Bar](./NavigationBarStyle_Bar.md)
-  - [NavigationBarStyle.Color](./NavigationBarStyle_Color.md)
-  - [ViewControllerStyle](./ViewControllerStyle.md)
-  - [Theme](./Theme.md)
-  - [Unlimint.NotificationKeys](./Unlimint_NotificationKeys.md):
+  - [Methods](/Methods)
+  - [Theme](/Theme)
+  - [MainButtonStyle](/MainButtonStyle)
+  - [NavigationBarStyle](/NavigationBarStyle)
+  - [NavigationBarStyle.Bar](/NavigationBarStyle_Bar)
+  - [NavigationBarStyle.Color](/NavigationBarStyle_Color)
+  - [ViewControllerStyle](/ViewControllerStyle)
+  - [PresentationStyle](/PresentationStyle)
+  - [Unlimint.NotificationKeys](/Unlimint_NotificationKeys):
     Key in userInfo notifications
-  - [Unlimint](./Unlimint.md)
-  - [BindingErrors](./BindingErrors.md)
-  - [PaymentErrors](./PaymentErrors.md)
-  - [PresentationStyle](./PresentationStyle.md)
+  - [Unlimint](/Unlimint)
+  - [Unlimint.PaymentMethods](/Unlimint_PaymentMethods)
+  - [BindingErrors](/BindingErrors)
+  - [PaymentErrors](/PaymentErrors)

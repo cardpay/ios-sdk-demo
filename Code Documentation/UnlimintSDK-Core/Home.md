@@ -1,65 +1,69 @@
 # Types
 
-  - [BillingAddress](./BillingAddress.md)
-  - [BindingCustomer](./BindingCustomer.md):
+  - [BillingAddress](/BillingAddress)
+  - [BindingCustomer](/BindingCustomer):
     Binding customer data model
-  - [BindingMethodData](./BindingMethodData.md):
+  - [BindingMethodData](/BindingMethodData):
     Binding method data model
-  - [BindingMethodData.MerchantOrder](./BindingMethodData_MerchantOrder.md)
-  - [BindingResultModel](./BindingResultModel.md):
+  - [BindingMethodData.MerchantOrder](/BindingMethodData_MerchantOrder)
+  - [BindingResultModel](/BindingResultModel):
     Binding data model
-  - [CheckCardAccount](./CheckCardAccount.md):
+  - [CardPaymentSystem](/CardPaymentSystem)
+  - [CheckCardAccount](/CheckCardAccount):
     Check card account data model
-  - [Currency](./Currency.md):
+  - [AvailablePaymentMethod](/AvailablePaymentMethod)
+  - [AvailablePaymentMethod.MethodName](/AvailablePaymentMethod_MethodName)
+  - [Currency](/Currency):
     Currency data model
-  - [PaymentCustomer](./PaymentCustomer.md):
+  - [PaymentCustomer](/PaymentCustomer):
     Customer data model
-  - [ShippingAddress](./ShippingAddress.md):
+  - [ShippingAddress](/ShippingAddress):
     Shipping address data model
-  - [Item](./Item.md):
+  - [Item](/Item):
     Item data model
-  - [PaymentMerchantOrder](./PaymentMerchantOrder.md):
+  - [PaymentMerchantOrder](/PaymentMerchantOrder):
     Payment merchant order data model
-  - [PaymentData](./PaymentData.md):
+  - [PaymentData](/PaymentData):
     Payment data model
-  - [PaymentResultModel](./PaymentResultModel.md):
+  - [PaymentResultModel](/PaymentResultModel):
     Data model
-  - [PaymentTokenMethodData](./PaymentTokenMethodData.md):
+  - [PaymentTokenMethodData](/PaymentTokenMethodData):
     Data model
-  - [PaymentTokenMethodData.CardAccount](./PaymentTokenMethodData_CardAccount.md):
+  - [PaymentTokenMethodData.CardAccount](/PaymentTokenMethodData_CardAccount):
     Data model
-  - [PaymentMethodData](./PaymentMethodData.md):
+  - [PaymentMethodData](/PaymentMethodData):
     Data model
-  - [PaymentMethodData.CardAccount](./PaymentMethodData_CardAccount.md):
+  - [PaymentMethodData.CardAccount](/PaymentMethodData_CardAccount):
     Data model
-  - [PaypalPaymentCustomer](./PaypalPaymentCustomer.md):
+  - [PaypalPaymentCustomer](/PaypalPaymentCustomer):
     Data model
-  - [PaypalPaymentMethodData](./PaypalPaymentMethodData.md):
+  - [PaypalPaymentMethodData](/PaypalPaymentMethodData):
     Data model
-  - [PaypalResultModel](./PaypalResultModel.md):
+  - [PaypalResultModel](/PaypalResultModel):
     Data model
-  - [CardPaymentRequisites](./CardPaymentRequisites.md):
+  - [CardPaymentRequisites](/CardPaymentRequisites):
     Data model, for transmitting card details
-  - [CardRequisites](./CardRequisites.md):
+  - [CardRequisites](/CardRequisites):
     Data model, for transmitting card details
-  - [PaypalRequisites](./PaypalRequisites.md):
+  - [PaypalRequisites](/PaypalRequisites):
     Data model, for PayPal method
-  - [TokenPaymentRequisites](./TokenPaymentRequisites.md):
+  - [TokenPaymentRequisites](/TokenPaymentRequisites):
     Data model, for payment token method
-  - [UnlimintErrors](./UnlimintErrors.md)
-  - [WebNavigationResults](./WebNavigationResults.md)
-  - [Environments](./Environments.md):
+  - [UnlimintErrors](/UnlimintErrors)
+  - [WebNavigationResults](/WebNavigationResults)
+  - [Environments](/Environments):
     List of environments
-  - [BindingCardDomain](./BindingCardDomain.md):
+  - [BindingCardDomain](/BindingCardDomain):
     Binding bank card
-  - [PayPalDomain](./PayPalDomain.md):
+  - [CheckoutDomain](/CheckoutDomain)
+  - [PayPalDomain](/PayPalDomain):
     Payment with PayPal
-  - [PaymentCardDomain](./PaymentCardDomain.md):
+  - [PaymentCardDomain](/PaymentCardDomain):
     Pay with bank card or bank card token
-  - [PaymentCardDomain.PayTypes](./PaymentCardDomain_PayTypes.md):
+  - [PaymentCardDomain.PayTypes](/PaymentCardDomain_PayTypes):
     Payment variants for methods
 
 # Protocols
 
-  - [Apply](./Apply.md):
+  - [Apply](/Apply):
     A simple and useful utility for object configuration

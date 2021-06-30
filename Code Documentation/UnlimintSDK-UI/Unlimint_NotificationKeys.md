@@ -20,6 +20,14 @@ The value stores the name of the method
 case method
 ```
 
+### `checkoutError`
+
+The value stores an error of the type CheckoutError
+
+``` swift
+case checkoutError
+```
+
 ### `bindingError`
 
 The value stores an error of the type BindingError

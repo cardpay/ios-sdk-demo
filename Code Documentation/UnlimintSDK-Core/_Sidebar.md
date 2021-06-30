@@ -1,6 +1,8 @@
 <details>
 <summary>Types</summary>
 
+  - [AvailablePaymentMethod](/AvailablePaymentMethod)
+  - [AvailablePaymentMethod.MethodName](/AvailablePaymentMethod.MethodName)
   - [BillingAddress](/BillingAddress)
   - [BindingCardDomain](/BindingCardDomain)
   - [BindingCustomer](/BindingCustomer)
@@ -8,8 +10,10 @@
   - [BindingMethodData.MerchantOrder](/BindingMethodData.MerchantOrder)
   - [BindingResultModel](/BindingResultModel)
   - [CardPaymentRequisites](/CardPaymentRequisites)
+  - [CardPaymentSystem](/CardPaymentSystem)
   - [CardRequisites](/CardRequisites)
   - [CheckCardAccount](/CheckCardAccount)
+  - [CheckoutDomain](/CheckoutDomain)
   - [Currency](/Currency)
   - [Environments](/Environments)
   - [Item](/Item)

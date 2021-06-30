@@ -36,7 +36,12 @@ private extension AuthorizationProvider {
             case let .success(response):
                 let data = response.data
                 let json = try? (JSONSerialization.jsonObject(with: data, options: []) as! [String: Any])
-                competionClosure?(json!["token"] as! String)
+
+                guard let token = json?["token"] as? String else {
+                    return
+                }
+
+                competionClosure?(token)
 
             case let .failure(error):
                 assertionFailure(error.localizedDescription)
