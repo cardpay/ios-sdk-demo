@@ -47,7 +47,7 @@ end
 ```
 
 For Unlimint SDK Core
-```
+```ruby
 source 'https://github.com/cardpay/ios-sdk-podspec.git'
 
 platform :ios, '11.0'
