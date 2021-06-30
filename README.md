@@ -1,7 +1,20 @@
 Unlimint SDK
 ========
 
-[Download to TestFlight](https://testflight.apple.com/join/1hfthfjp)
+Unlimint mobile SDK helps you to implement payments in your application. Release 1.8 version supports following methods:
+- binding card for further recurring payments,
+- checking which payment methods are available for you,
+- payment with new bank card,
+- payment with saved bank card (token),
+- payment with PayPal.
+
+Unlimint SDK has two parts: SDK UI and SDK Core.
+SDK UI already contains SDK Core. The former has user interface, root detection and simplified API. It securely collects and transmits user card data. The latter has only payment methods.
+We strongly recommend to use SDK UI if you don't have PCI DSS certificate.
+
+## DemoApp
+
+[Download DemoApp via TestFlight](https://testflight.apple.com/join/1hfthfjp)
 
 ## Requirements
 
@@ -34,9 +47,50 @@ end
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
 
+## Basic Usage
+
+#### Environment
+
+```Swift
+# For Unlimint SDK UI
+Unlimint.shared.environment = .sandbox
+
+# For Unlimint SDK Core
+Environments.current = .sandbox
+
+```
+
+#### UI Customization
+
+Find more details in [UI Customization](https://github.com/cardpay/ios-sdk-demo/wiki/SDK-UI-Customization).
+
+```Swift
+'Unlimint.shared.theme'
+
+public struct Theme {
+
+ public var navigationStyle: NavigationBarStyle
+ 
+ public var mainButtonStyle: MainButtonStyle
+ 
+ public var viewControllerStyle: ViewControllerStyle
+ 
+ public init(navigationStyle: NavigationBarStyle = .init(bar: .largeNavBar,
+                                                         statusBarStyle: .default,
+                                                         navigationBarColor: .transparentDark,
+                                                         tintColor: .clear), 
+             mainButtonStyle: MainButtonStyle = .init(cornerRadius: 2,
+                                      titleColor: (UIConstants.Colors.primaryBlack,
+                                                   UIConstants.Colors.primaryGray),
+                                      backgroundColor: (UIConstants.Colors.primaryGreen,
+                                                        UIConstants.Colors.primaryWhite)),
+             viewControllerStyle: ViewControllerStyle = .init(backgroundColor: .white))
+}
+```
+
 ## Documentation
 
-- [Technical documents](./Docs).
+- [Technical documents](https://github.com/cardpay/ios-sdk-demo/wiki).
 
 - [UnlimintSDK-Core documentation](<./Code Documentation/UnlimintSDK-Core/Home.md>).
 - [UnlimintSDK-UI documentation](<./Code Documentation/UnlimintSDK-UI/Home.md>).
