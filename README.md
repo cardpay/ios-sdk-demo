@@ -104,8 +104,8 @@ public struct Theme {
 
 - [Technical documents](https://github.com/cardpay/ios-sdk-demo/wiki).
 
-- [UnlimintSDK-Core documentation](<./Code Documentation/UnlimintSDK-Core/Home.md>).
 - [UnlimintSDK-UI documentation](<./Code Documentation/UnlimintSDK-UI/Home.md>).
+- [UnlimintSDK-Core documentation](<./Code Documentation/UnlimintSDK-Core/Home.md>).
 
 ## Contribution Guide
 
