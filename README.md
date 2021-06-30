@@ -29,6 +29,7 @@ UnlimintSDK is available through [CocoaPods](https://cocoapods.org)
 
 #### Swift 5.x
 
+For Unlimint SDK UI
 ```ruby
 
 source 'https://github.com/CocoaPods/Specs.git'
@@ -39,9 +40,20 @@ use_frameworks!
 
 target 'UnlimintSDK-Demo' do
 
-  pod 'UnlimintSDK_UI', '~> 1.7'
+  pod 'UnlimintSDK_UI'
 
 end
+
+```
+
+For Unlimint SDK Core
+```
+source 'https://github.com/cardpay/ios-sdk-podspec.git'
+
+platform :ios, '11.0'
+use_frameworks!
+
+pod 'UnlimintSDK-Core'
 
 ```
 
