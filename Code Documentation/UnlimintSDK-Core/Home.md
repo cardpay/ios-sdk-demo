@@ -11,7 +11,7 @@
   - [BindingMethodData.MerchantOrder](/Code%20Documentation/UnlimintSDK-Core/BindingMethodData_MerchantOrder.md)
   - [BindingResultModel](/Code%20Documentation/UnlimintSDK-Core/BindingResultModel.md):
     Binding data model
-  - [CardPaymentSystem](/Code%20Documentation/UnlimintSDK-UI/CardPaymentSystem.md)
+  - [CardPaymentSystem](/Code%20Documentation/UnlimintSDK-Core/CardPaymentSystem.md)
   - [CheckCardAccount](/Code%20Documentation/UnlimintSDK-Core/CheckCardAccount.md):
     Check card account data model
   - [Currency](/Code%20Documentation/UnlimintSDK-Core/Currency.md):
