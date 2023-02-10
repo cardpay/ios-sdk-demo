@@ -18,9 +18,9 @@ We strongly recommend to use SDK UI if you don't have PCI DSS certificate.
 
 ## Requirements
 
-- iOS 11.0+
+- iOS 13.0+
 - Swift 5.3
-  - Xcode 12.0+
+  - Xcode 14.0+
 - CocoaPods 1.10.0+ (if you use)
 
 ## Installation
@@ -44,6 +44,14 @@ target 'UnlimintSDK-Demo' do
 
 end
 
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+                config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
+    end
+end
+
 ```
 
 For Unlimint SDK Core
@@ -54,6 +62,14 @@ platform :ios, '11.0'
 use_frameworks!
 
 pod 'UnlimintSDK-Core'
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+                config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
+    end
+end
 
 ```
 

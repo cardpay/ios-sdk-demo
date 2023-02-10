@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97CDAF0BC9FB80AEBE14B457 /* Pods_UnlimintSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF89F610988E1614C2098EA6 /* Pods_UnlimintSDK_Demo.framework */; };
+		D64EBEE849582B3D45830860 /* Pods_UnlimintSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4056ED70301E9E8BB277BEF9 /* Pods_UnlimintSDK_Demo.framework */; };
 		EB0403332608E06B009142F0 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0403322608E06B009142F0 /* ButtonStyles.swift */; };
 		EB4B50092609D38B00050DFC /* UnlimintTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B50082609D38B00050DFC /* UnlimintTextField.swift */; };
 		EB4B50192609E4CC00050DFC /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B50182609E4CC00050DFC /* InsetTextField.swift */; };
@@ -22,9 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CE485456A4120B7179DF0D9 /* Pods-UnlimintSDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		837D3DA20FE5C586F1FC6B37 /* Pods-UnlimintSDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		DF89F610988E1614C2098EA6 /* Pods_UnlimintSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4056ED70301E9E8BB277BEF9 /* Pods_UnlimintSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8DAE0696ABBD65B2EC09F9 /* Pods-UnlimintSDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		B38BA1432994DB5100904FE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C18E0CAFB1F565E594BEBA41 /* Pods-UnlimintSDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0403322608E06B009142F0 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		EB4B50082609D38B00050DFC /* UnlimintTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintTextField.swift; sourceTree = "<group>"; };
 		EB4B50182609E4CC00050DFC /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
@@ -53,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97CDAF0BC9FB80AEBE14B457 /* Pods_UnlimintSDK_Demo.framework in Frameworks */,
+				D64EBEE849582B3D45830860 /* Pods_UnlimintSDK_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +66,7 @@
 			children = (
 				EB624EBC2684C00A00C21D38 /* UnlimintSDK_UI.framework */,
 				EB624EB82684C00700C21D38 /* UnlimintSDK_Core.framework */,
-				DF89F610988E1614C2098EA6 /* Pods_UnlimintSDK_Demo.framework */,
+				4056ED70301E9E8BB277BEF9 /* Pods_UnlimintSDK_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,8 +74,8 @@
 		94CA20BFF06DD2ED143A96B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2CE485456A4120B7179DF0D9 /* Pods-UnlimintSDK-Demo.debug.xcconfig */,
-				837D3DA20FE5C586F1FC6B37 /* Pods-UnlimintSDK-Demo.release.xcconfig */,
+				C18E0CAFB1F565E594BEBA41 /* Pods-UnlimintSDK-Demo.debug.xcconfig */,
+				7B8DAE0696ABBD65B2EC09F9 /* Pods-UnlimintSDK-Demo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -163,11 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBAB8FAC257674BB0058FA71 /* Build configuration list for PBXNativeTarget "UnlimintSDK-Demo" */;
 			buildPhases = (
-				5BAC9A844CA77331C5790D32 /* [CP] Check Pods Manifest.lock */,
+				5688D4CC6DAE8B631A7AEBF8 /* [CP] Check Pods Manifest.lock */,
 				EBAB8F94257674BB0058FA71 /* Sources */,
 				EBAB8F95257674BB0058FA71 /* Frameworks */,
 				EBAB8F96257674BB0058FA71 /* Resources */,
-				75960D36CB1BCB3EAB752863 /* [CP] Embed Pods Frameworks */,
+				31CC64FDFE152E253BF5F4D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,7 +228,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5BAC9A844CA77331C5790D32 /* [CP] Check Pods Manifest.lock */ = {
+		31CC64FDFE152E253BF5F4D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5688D4CC6DAE8B631A7AEBF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,23 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		75960D36CB1BCB3EAB752863 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnlimintSDK-Demo/Pods-UnlimintSDK-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -294,6 +295,7 @@
 				EB6321B62638382D006433C8 /* pt-BR */,
 				EB6321B826383861006433C8 /* pt-PT */,
 				EB6321BA26383DFC006433C8 /* es-419 */,
+				B38BA1432994DB5100904FE7 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -364,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,23 +434,27 @@
 		};
 		EBAB8FAD257674BB0058FA71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CE485456A4120B7179DF0D9 /* Pods-UnlimintSDK-Demo.debug.xcconfig */;
+			baseConfigurationReference = C18E0CAFB1F565E594BEBA41 /* Pods-UnlimintSDK-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = CZRPTJK8H2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CZRPTJK8H2;
 				INFOPLIST_FILE = "UnlimintSDK-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.0;
+				MARKETING_VERSION = 1.8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.unlimint.demosdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Unlimint Demo SDK Ad Hoc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -456,23 +462,27 @@
 		};
 		EBAB8FAE257674BB0058FA71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 837D3DA20FE5C586F1FC6B37 /* Pods-UnlimintSDK-Demo.release.xcconfig */;
+			baseConfigurationReference = 7B8DAE0696ABBD65B2EC09F9 /* Pods-UnlimintSDK-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = CZRPTJK8H2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CZRPTJK8H2;
 				INFOPLIST_FILE = "UnlimintSDK-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.0;
+				MARKETING_VERSION = 1.8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.unlimint.demosdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Unlimint Demo SDK Ad Hoc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
