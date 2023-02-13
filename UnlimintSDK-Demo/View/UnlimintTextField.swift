@@ -154,7 +154,6 @@ extension UnlimintTextField: UITextFieldDelegate {
         return delegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) ?? true
     }
 
-    @available(iOS 13.0, *)
     func textFieldDidChangeSelection(_ textField: UITextField) {
 
         delegate?.textFieldDidChangeSelection?(textField)
