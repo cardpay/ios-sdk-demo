@@ -75,8 +75,3 @@ end
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
 
-
-## Link Framework 
-
-- if UnlimintSDK_SwiftUI not linked then link UnlimintSDK_SwiftUI manually into your project
-- Go to project General -> Framework -> add framework UnlimintSDK_SwiftUI from Pod file. 
