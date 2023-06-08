@@ -16,15 +16,18 @@ enum SheetType {
 
 struct ContentView: View {
     
-    @State var showNav = false
+    @State var showSheet = false
     private let authorizationProvider: AuthorizationProvider = .init()
     @State var token : String = ""
     @State private var showingSheet = false
     @State var sheetType : SheetType = .payment
+    var testEditPayment = false
     
+    let price: Decimal  = 6
+    let currency : String = "EUR"
+
     init() {
         Unlimint.shared.environment = .sandbox
-        
     }
     
     var body: some View {
@@ -38,7 +41,7 @@ struct ContentView: View {
                 
                 
                 VStack(alignment: .leading, spacing: 15) {
-                    Text("Casual Snekers")
+                    Text("Casual Sneakers")
                         .font(.title2)
                     
                     Text("Easy to get on and wear all day. Keeping you comfortable as you run. Lightweight and responsive, breathable, and secure.")
@@ -51,7 +54,7 @@ struct ContentView: View {
                             .font(.footnote)
                             .foregroundColor(Color.gray)
                         
-                        Text("5.0 EUR")
+                        Text((price.toPrice() ?? "0") + " \(currency)")
                             .font(.footnote)
                     }
                 }
@@ -62,7 +65,7 @@ struct ContentView: View {
                 // Buy Button
                 Button {
                     authorizationProvider.setup { newtoken in
-                        showNav = true
+                        showSheet = true
                         token = newtoken
                         sheetType = .payment
                     }
@@ -78,7 +81,7 @@ struct ContentView: View {
                         
                         Text("Pay")
                             .foregroundColor(.blue)
-                            //.background(.clear)
+                           // .background(Color.clear)
                             .accentColor(.black)
                     }
                 }
@@ -88,7 +91,7 @@ struct ContentView: View {
                 Button {
                     // LinkACard()
                     authorizationProvider.setup { newtoken in
-                        showNav = true
+                        showSheet = true
                         token = newtoken
                         sheetType = .bind
                     }
@@ -109,100 +112,131 @@ struct ContentView: View {
             }
         }
         
-        .sheet(isPresented: $showNav) {
+        .sheet(isPresented: $showSheet) {
             
             switch sheetType {
                 
             case .payment :
                
-                Unlimint.shared.checkoutSwiftUI(for: token, with: [
+                if testEditPayment {
                     
-                    
-                    .card(.init(with: "Facebook Inc",
-                                paymentMethod: "BANKCARD",
-                                customer: .init(homePhone: nil,
-                                                workPhone: nil,
-                                                email: "test@unlimint.com",
-                                                locale: nil),
-                                merchantOrder: .init(description: "<description>", id: "<id>"),
-                                paymentData: .init(amount: 6,
-                                                   currency: "EUR",
-                                                   note: nil,
-                                                   dynamicDescriptor: nil,
-                                                   transType: nil),
-                                cardAccount: nil)),
-                    
-                    
-                    
-                    .cardToken(type: .mastercard, .init(with: "<Merchant>",
-                                                        paymentMethod: "BANKCARD",
-                                                        customer: .init(homePhone: nil,
-                                                                        workPhone: nil,
-                                                                        email: "test@unlimint.com",
-                                                                        locale: "nil"),
-                                                        merchantOrder: .init(description: "<description>",
-                                                                             id: "<id>"),
-                                                        paymentData: .init(amount: 5,
-                                                                           currency: "EUR",
-                                                                           note: nil,
-                                                                           dynamicDescriptor: nil,
-                                                                           transType: nil),
-                                                        cardAccount: .init(token: "a3d85ac0-4268-bb12-a628-f1e13a4988d8",
-                                                                           pan: "1234",
-                                                                           billingAddress: nil))),
-                    
-                    
-                    
-                    .cardToken(type: .mir, .init(with: "<Merchant>",
-                                                 paymentMethod: "BANKCARD",
-                                                 customer: .init(homePhone: nil,
-                                                                 workPhone: nil,
-                                                                 email: "test@unlimint.com",
-                                                                 locale: "nil"),
-                                                 merchantOrder: .init(description: "<description>",
-                                                                      id: "<id>"),
-                                                 paymentData: .init(amount: 7,
-                                                                    currency: "EUR",
-                                                                    note: nil,
-                                                                    dynamicDescriptor: nil,
-                                                                    transType: nil),
-                                                 cardAccount: .init(token: "a3d85ac0-4268-bb12-a628-f1e13a4988d8",
-                                                                    pan: "1234",
-                                                                    billingAddress: nil))),
-                   
-                    
-                    
-                    
-                    .payPal(.init(merchantName: "<Merchant>",
-                                  merchantOrder: .init(description: "<description>",
-                                                       id: "<id>"),
-                                  paymentMethod: "PAYPAL",
-                                  paymentData: .init(amount: 8,
-                                                     currency: "EUR",
-                                                     note: nil,
-                                                     dynamicDescriptor: nil,
-                                                     transType: nil),
-                                  customer: .init(email: "test@unlimint.com")))
-                ])
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Unlimint SDK")
-                //.presentationDetents([.height(450)])
-
+                    Unlimint.shared.checkout(for: token, with: [
+                        
+                        
+                        .card(.init(with: "Facebook Inc",
+                                    paymentMethod: "BANKCARD",
+                                    customer: .init(homePhone: nil,
+                                                    workPhone: nil,
+                                                    email: "test@unlimint.com",
+                                                    locale: nil),
+                                    merchantOrder: .init(description: "<description>", id: "<id>"),
+                                    paymentData: .init(amount: price,
+                                                       currency: "EUR",
+                                                       note: nil,
+                                                       dynamicDescriptor: nil,
+                                                       transType: nil),
+                                    cardAccount: nil))
+                    ])
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationTitle("Unlimint SDK")
+                }
                 
+                else {
+                    
+                    Unlimint.shared.checkout(for: token, with: [
+                        
+                        .card(.init(with: "Facebook Inc",
+                                    paymentMethod: "BANKCARD",
+                                    customer: .init(homePhone: nil,
+                                                    workPhone: nil,
+                                                    email: "test@unlimint.com",
+                                                    locale: nil),
+                                    merchantOrder: .init(description: "<description>", id: "<id>"),
+                                    paymentData: .init(amount: price,
+                                                       currency: "EUR",
+                                                       note: nil,
+                                                       dynamicDescriptor: nil,
+                                                       transType: nil,
+                                                       isEditable: true),
+                                    cardAccount: nil)),
+                        
+                            .cardToken(type: .mastercard, .init(with: "<Merchant>",
+                                                                paymentMethod: "BANKCARD",
+                                                                customer: .init(homePhone: nil,
+                                                                                workPhone: nil,
+                                                                                email: "test@unlimint.com",
+                                                                                locale: "nil"),
+                                                                merchantOrder: .init(description: "<description>",
+                                                                                     id: "<id>"),
+                                                                paymentData: .init(amount: price,
+                                                                                   currency: "EUR",
+                                                                                   note: nil,
+                                                                                   dynamicDescriptor: nil,
+                                                                                   transType: nil),
+                                                                cardAccount: .init(token: "a3d85ac0-4268-bb12-a628-f1e13a4988d8",
+                                                                                   pan: "1234",
+                                                                                   billingAddress: nil))),
+                        
+                            .cardToken(type: .mir, .init(with: "<Merchant>",
+                                                         paymentMethod: "BANKCARD",
+                                                         customer: .init(homePhone: nil,
+                                                                         workPhone: nil,
+                                                                         email: "test@unlimint.com",
+                                                                         locale: "nil"),
+                                                         merchantOrder: .init(description: "<description>",
+                                                                              id: "<id>"),
+                                                         paymentData: .init(amount: price,
+                                                                            currency: "EUR",
+                                                                            note: nil,
+                                                                            dynamicDescriptor: nil,
+                                                                            transType: nil),
+                                                         cardAccount: .init(token: "a3d85ac0-4268-bb12-a628-f1e13a4988d8",
+                                                                            pan: "1234",
+                                                                            billingAddress: nil))),
+                        
+                            .payPal(.init(merchantName: "<Merchant>",
+                                          merchantOrder: .init(description: "<description>",
+                                                               id: "<id>"),
+                                          paymentMethod: "PAYPAL",
+                                          paymentData: .init(amount: price,
+                                                             currency: "EUR",
+                                                             note: nil,
+                                                             dynamicDescriptor: nil,
+                                                             transType: nil),
+                                          customer: .init(email: "test@unlimint.com")))
+                    ])
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationTitle("Unlimint SDK")
+                    //.presentationDetents([.height(450)])
+            }
             case .bind :
                 
-                Unlimint.shared.bindSwiftUI(for: token, with:BindingMethodData(currency: .init(with: "EUR"), customer: .init(id: "test", email:"test@unlimint.com")))
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Unlimint SDK")
+                Unlimint.shared.bind(for: token, with:BindingMethodData(currency: .init(with: "EUR"), customer: .init(id: "test", email:"test@unlimint.com")))
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationTitle("Unlimint SDK")
                 //.presentationDetents([.height(450)])
-
+                
             }
         }
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+
+extension Decimal {
+    func toPrice() -> String? {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = ","
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        
+        return formatter.string(for: self)
     }
 }
