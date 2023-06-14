@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70866284446067E473CEE098 /* Pods_UnlimintSDKSwiftUI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D541C953661711E0524A7A49 /* Pods_UnlimintSDKSwiftUI_Demo.framework */; };
+		B3CAE4232A396744003ACD51 /* Code Documentation in Resources */ = {isa = PBXBuildFile; fileRef = B3CAE4222A396744003ACD51 /* Code Documentation */; };
 		B3D9DF9A2A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */; };
 		B3D9DF9C2A2DB66E005E7CEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */; };
 		B3D9DF9E2A2DB66F005E7CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D9DF9D2A2DB66F005E7CEA /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1C5A58942DBE975E9C14F69E /* Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDKSwiftUI-Demo/Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		B3CAE4222A396744003ACD51 /* Code Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Code Documentation"; sourceTree = "<group>"; };
 		B3D9DF962A2DB66E005E7CEA /* UnlimintSDKSwiftUI-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnlimintSDKSwiftUI-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintSDKSwiftUI_DemoApp.swift; sourceTree = "<group>"; };
 		B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		B3D9DF8D2A2DB66E005E7CEA = {
 			isa = PBXGroup;
 			children = (
+				B3CAE4222A396744003ACD51 /* Code Documentation */,
 				B3D9DF982A2DB66E005E7CEA /* UnlimintSDKSwiftUI-Demo */,
 				B3D9DFA92A2DB66F005E7CEA /* UnlimintSDKSwiftUI-DemoTests */,
 				B3D9DFB32A2DB66F005E7CEA /* UnlimintSDKSwiftUI-DemoUITests */,
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CAE4232A396744003ACD51 /* Code Documentation in Resources */,
 				B3D9DFA12A2DB66F005E7CEA /* Preview Assets.xcassets in Resources */,
 				B3D9DF9E2A2DB66F005E7CEA /* Assets.xcassets in Resources */,
 			);
