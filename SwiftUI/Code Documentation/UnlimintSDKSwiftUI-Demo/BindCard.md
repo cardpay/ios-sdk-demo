@@ -44,16 +44,16 @@ eventUnlimintFinished : When payment is completed and trying to close payment wi
 ### eventUnlimintSuccess and get id (recurring_id). 
 
 
-## use recurring_id and get fillind.id
+## use recurring_id and get filing.id
 
 ###
-Follow the URL to get information about the recurring payment and get the filling.id
+Follow the URL to get information about the recurring payment and get the filing.id
 https://integration.unlimint.com/new/api-reference/d32cfbbd90466-get-recurring-information
 ###
 
 
 
-## use fillinf.id and create the payment
+## use filing.id and create the payment
 
 ###
 Follow the instrusction 
