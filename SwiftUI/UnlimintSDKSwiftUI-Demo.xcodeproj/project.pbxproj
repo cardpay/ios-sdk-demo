@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70866284446067E473CEE098 /* Pods_UnlimintSDKSwiftUI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D541C953661711E0524A7A49 /* Pods_UnlimintSDKSwiftUI_Demo.framework */; };
 		B3CAE4232A396744003ACD51 /* Code Documentation in Resources */ = {isa = PBXBuildFile; fileRef = B3CAE4222A396744003ACD51 /* Code Documentation */; };
+		B3CEF1882A613681004B11BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3CEF18A2A613681004B11BA /* Localizable.strings */; };
 		B3D9DF9A2A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */; };
 		B3D9DF9C2A2DB66E005E7CEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */; };
 		B3D9DF9E2A2DB66F005E7CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D9DF9D2A2DB66F005E7CEA /* Assets.xcassets */; };
@@ -40,6 +41,10 @@
 /* Begin PBXFileReference section */
 		1C5A58942DBE975E9C14F69E /* Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDKSwiftUI-Demo/Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B3CAE4222A396744003ACD51 /* Code Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Code Documentation"; sourceTree = "<group>"; };
+		B3CEF1892A613681004B11BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B3CEF18B2A613686004B11BA /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B3CEF18C2A613689004B11BA /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B3CEF18D2A61368B004B11BA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B3D9DF962A2DB66E005E7CEA /* UnlimintSDKSwiftUI-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnlimintSDKSwiftUI-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintSDKSwiftUI_DemoApp.swift; sourceTree = "<group>"; };
 		B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 		B3D9DF8D2A2DB66E005E7CEA = {
 			isa = PBXGroup;
 			children = (
+				B3CEF18A2A613681004B11BA /* Localizable.strings */,
 				B3CAE4222A396744003ACD51 /* Code Documentation */,
 				B3D9DF982A2DB66E005E7CEA /* UnlimintSDKSwiftUI-Demo */,
 				B3D9DFA92A2DB66F005E7CEA /* UnlimintSDKSwiftUI-DemoTests */,
@@ -258,6 +264,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
+				"pt-BR",
+				"pt-PT",
 			);
 			mainGroup = B3D9DF8D2A2DB66E005E7CEA;
 			productRefGroup = B3D9DF972A2DB66E005E7CEA /* Products */;
@@ -277,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3CAE4232A396744003ACD51 /* Code Documentation in Resources */,
+				B3CEF1882A613681004B11BA /* Localizable.strings in Resources */,
 				B3D9DFA12A2DB66F005E7CEA /* Preview Assets.xcassets in Resources */,
 				B3D9DF9E2A2DB66F005E7CEA /* Assets.xcassets in Resources */,
 			);
@@ -384,6 +394,20 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B3CEF18A2A613681004B11BA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3CEF1892A613681004B11BA /* en */,
+				B3CEF18B2A613686004B11BA /* es-419 */,
+				B3CEF18C2A613689004B11BA /* pt-PT */,
+				B3CEF18D2A61368B004B11BA /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		B3D9DFB82A2DB66F005E7CEA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -441,6 +465,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -494,6 +519,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
