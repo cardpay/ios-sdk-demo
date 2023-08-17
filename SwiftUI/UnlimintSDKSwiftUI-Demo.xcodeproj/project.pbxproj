@@ -8,10 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		70866284446067E473CEE098 /* Pods_UnlimintSDKSwiftUI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D541C953661711E0524A7A49 /* Pods_UnlimintSDKSwiftUI_Demo.framework */; };
+		B3B5F6682A8CF92B00367243 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F65E2A8CF92B00367243 /* HomeViewModel.swift */; };
+		B3B5F6692A8CF92B00367243 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F65F2A8CF92B00367243 /* HomeView.swift */; };
+		B3B5F66A2A8CF92B00367243 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F6602A8CF92B00367243 /* StatusView.swift */; };
+		B3B5F66B2A8CF92B00367243 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F6622A8CF92B00367243 /* StatusModel.swift */; };
+		B3B5F66C2A8CF92B00367243 /* CardTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F6632A8CF92B00367243 /* CardTokenModel.swift */; };
+		B3B5F66D2A8CF92B00367243 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F6652A8CF92B00367243 /* Endpoints.swift */; };
+		B3B5F66E2A8CF92B00367243 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F6662A8CF92B00367243 /* NetworkService.swift */; };
+		B3B5F66F2A8CF92B00367243 /* AuthorizationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5F6672A8CF92B00367243 /* AuthorizationProvider.swift */; };
+		B3B5F6702A8DE3BB00367243 /* UnlimintSDK_SwiftUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D9DFC92A2DB835005E7CEA /* UnlimintSDK_SwiftUI.xcframework */; };
 		B3CAE4232A396744003ACD51 /* Code Documentation in Resources */ = {isa = PBXBuildFile; fileRef = B3CAE4222A396744003ACD51 /* Code Documentation */; };
 		B3CEF1882A613681004B11BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3CEF18A2A613681004B11BA /* Localizable.strings */; };
 		B3D9DF9A2A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */; };
-		B3D9DF9C2A2DB66E005E7CEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */; };
 		B3D9DF9E2A2DB66F005E7CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D9DF9D2A2DB66F005E7CEA /* Assets.xcassets */; };
 		B3D9DFA12A2DB66F005E7CEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D9DFA02A2DB66F005E7CEA /* Preview Assets.xcassets */; };
 		B3D9DFAB2A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DFAA2A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoTests.swift */; };
@@ -40,6 +48,14 @@
 
 /* Begin PBXFileReference section */
 		1C5A58942DBE975E9C14F69E /* Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig"; path = "Target Support Files/Pods-UnlimintSDKSwiftUI-Demo/Pods-UnlimintSDKSwiftUI-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		B3B5F65E2A8CF92B00367243 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B3B5F65F2A8CF92B00367243 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B3B5F6602A8CF92B00367243 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		B3B5F6622A8CF92B00367243 /* StatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		B3B5F6632A8CF92B00367243 /* CardTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTokenModel.swift; sourceTree = "<group>"; };
+		B3B5F6652A8CF92B00367243 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		B3B5F6662A8CF92B00367243 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B3B5F6672A8CF92B00367243 /* AuthorizationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationProvider.swift; sourceTree = "<group>"; };
 		B3CAE4222A396744003ACD51 /* Code Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Code Documentation"; sourceTree = "<group>"; };
 		B3CEF1892A613681004B11BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3CEF18B2A613686004B11BA /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -47,7 +63,6 @@
 		B3CEF18D2A61368B004B11BA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B3D9DF962A2DB66E005E7CEA /* UnlimintSDKSwiftUI-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnlimintSDKSwiftUI-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintSDKSwiftUI_DemoApp.swift; sourceTree = "<group>"; };
-		B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3D9DF9D2A2DB66F005E7CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D9DFA02A2DB66F005E7CEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3D9DFA62A2DB66F005E7CEA /* UnlimintSDKSwiftUI-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnlimintSDKSwiftUI-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B5F6702A8DE3BB00367243 /* UnlimintSDK_SwiftUI.xcframework in Frameworks */,
 				70866284446067E473CEE098 /* Pods_UnlimintSDKSwiftUI_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +122,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B3B5F65D2A8CF92B00367243 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3B5F65E2A8CF92B00367243 /* HomeViewModel.swift */,
+				B3B5F65F2A8CF92B00367243 /* HomeView.swift */,
+				B3B5F6602A8CF92B00367243 /* StatusView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3B5F6612A8CF92B00367243 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3B5F6622A8CF92B00367243 /* StatusModel.swift */,
+				B3B5F6632A8CF92B00367243 /* CardTokenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3B5F6642A8CF92B00367243 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B3B5F6652A8CF92B00367243 /* Endpoints.swift */,
+				B3B5F6662A8CF92B00367243 /* NetworkService.swift */,
+				B3B5F6672A8CF92B00367243 /* AuthorizationProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B3D9DF8D2A2DB66E005E7CEA = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				B3D9DFC32A2DB6BB005E7CEA /* Network */,
+				B3B5F6612A8CF92B00367243 /* Model */,
+				B3B5F6642A8CF92B00367243 /* Network */,
+				B3B5F65D2A8CF92B00367243 /* View */,
 				B3D9DF992A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift */,
-				B3D9DF9B2A2DB66E005E7CEA /* ContentView.swift */,
 				B3D9DF9D2A2DB66F005E7CEA /* Assets.xcassets */,
 				B3D9DF9F2A2DB66F005E7CEA /* Preview Content */,
 			);
@@ -355,9 +402,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D9DF9C2A2DB66E005E7CEA /* ContentView.swift in Sources */,
+				B3B5F66E2A8CF92B00367243 /* NetworkService.swift in Sources */,
+				B3B5F66B2A8CF92B00367243 /* StatusModel.swift in Sources */,
+				B3B5F66C2A8CF92B00367243 /* CardTokenModel.swift in Sources */,
 				B3D9DFC62A2DB6BB005E7CEA /* Endpoints.swift in Sources */,
+				B3B5F66D2A8CF92B00367243 /* Endpoints.swift in Sources */,
+				B3B5F66F2A8CF92B00367243 /* AuthorizationProvider.swift in Sources */,
 				B3D9DFC72A2DB6BB005E7CEA /* AuthorizationProvider.swift in Sources */,
+				B3B5F6692A8CF92B00367243 /* HomeView.swift in Sources */,
+				B3B5F66A2A8CF92B00367243 /* StatusView.swift in Sources */,
+				B3B5F6682A8CF92B00367243 /* HomeViewModel.swift in Sources */,
 				B3D9DF9A2A2DB66E005E7CEA /* UnlimintSDKSwiftUI_DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

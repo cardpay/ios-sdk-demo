@@ -12,6 +12,7 @@ import UnlimintSDK_Core
 
 enum ApiEndpoints: TargetType {
     case mobileToken
+    case cardToken(String)
 }
 
 extension ApiEndpoints {
@@ -24,11 +25,19 @@ extension ApiEndpoints {
         switch self {
         case .mobileToken:
             return "/mobile/generate_token"
+        case .cardToken(let transationid):
+            return "/mobile/payment/\(transationid)"
         }
     }
-            
+
     var method: Moya.Method {
-        .post
+        
+        switch self {
+        case .mobileToken:
+            return .post
+        case .cardToken:
+            return .get
+        }
     }
 
     var sampleData: Data { Data() }
@@ -49,15 +58,14 @@ extension ApiEndpoints {
                 ]
             ],
             encoding: JSONEncoding.default)
+        case .cardToken:
+            return .requestPlain
         }
     }
     
     var headers: [String : String]? {
-        switch self {
-        case .mobileToken:
-            return [
-                "Content-Type": "application/json",
-            ]
-        }
+        return [
+            "Content-Type": "application/json",
+        ]
     }
 }
