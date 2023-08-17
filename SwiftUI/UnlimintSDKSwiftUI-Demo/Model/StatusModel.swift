@@ -17,12 +17,10 @@ import Foundation
 
 // MARK: - Welcome
 struct StatusModel: Codable {
-    
     let uid: String
-    let pan: String
+    let pan: String?
     let method: String
     let orderID: String?
     let amount: String?
-    
 }
 

@@ -32,6 +32,7 @@ class HomeViewModel : ObservableObject {
     @Published var get_card_Binding_Token = true
     
     var isCardTokenGenerated = false
+    var failedStatus = false
     @Published var payWithCardToken = false
     
     
@@ -42,6 +43,9 @@ class HomeViewModel : ObservableObject {
         Unlimint.shared.environment = .sandbox
         Unlimint.shared.skipStatusPages = true
         Unlimint.shared.get_card_Binding_Token = self.get_card_Binding_Token
+        
+        prepareCheckoutData()
+        
         addEventFailure()
         addEventSuccessful()
     }
@@ -104,6 +108,7 @@ class HomeViewModel : ObservableObject {
                     self.payWithTokenData.removeAll()
                     self.payWithTokenData.append(.cardToken(type: .mastercard, cardTokenData!))
                     self.checkoutData.removeAll()
+                    prepareCheckoutData()
                     self.checkoutData.append(.cardToken(type: .mastercard, cardTokenData!))
                 
                 let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
@@ -131,19 +136,33 @@ class HomeViewModel : ObservableObject {
               }
             }
         }
-
-        else if userInfo!["UnlimintSDK.method"] as! String == "paymentWithToken" {
-
-           // isShowStatus = false
+        else {
+            
+            let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
+            dispatchQueue.async{
+                
+                DispatchQueue.main.async{
+                    
+                    if Unlimint.shared.skipStatusPages == true {
+                        self.showSheet = true
+                        self.sheetType = .statusView
+                    }
+                }
+            }
         }
-        else if userInfo!["UnlimintSDK.method"] as! String == "payPal" {
 
-           // isShowStatus = false
-        }
-        else if userInfo!["UnlimintSDK.method"] as! String == "paymentWithCard" {
-
-           // isShowStatus = false
-        }
+//        else if userInfo!["UnlimintSDK.method"] as! String == "paymentWithToken" {
+//
+//           // isShowStatus = false
+//        }
+//        else if userInfo!["UnlimintSDK.method"] as! String == "payPal" {
+//
+//           // isShowStatus = false
+//        }
+//        else if userInfo!["UnlimintSDK.method"] as! String == "paymentWithCard" {
+//
+//           // isShowStatus = false
+//        }
     }
     
     private func eventUnlimintFailure(_ notification: Notification) {
@@ -151,6 +170,20 @@ class HomeViewModel : ObservableObject {
         let userInfo = notification.userInfo
         print(userInfo)
 
+        
+        let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
+        dispatchQueue.async{
+
+            DispatchQueue.main.async{
+              
+              if Unlimint.shared.skipStatusPages == true {
+                  self.showSheet = true
+                  self.sheetType = .statusView
+                  self.failedStatus = true
+              }
+          }
+        }
+        
         /*
          Optional([AnyHashable("UnlimintSDK.bindingError"):
          UnlimintSDK_SwiftUI.BindingErrors.decline,
@@ -175,11 +208,11 @@ extension HomeViewModel {
     
     func getStatusModel() -> StatusModel? {
 
-        if let method = responseData["UnlimintSDK.method"], let uid = responseData["UnlimintSDK.id"], let pan = responseData["UnlimintSDK.pan"] {
-            return StatusModel(uid: uid as! String , pan: pan as! String, method: method as! String, orderID: nil, amount: nil)
+        if let method = responseData["UnlimintSDK.method"], let uid = responseData["UnlimintSDK.id"] {
+            return StatusModel(uid: uid as! String, pan: responseData["UnlimintSDK.pan"] as? String ?? "Paypal", method: method as! String, orderID: nil, amount: nil)
         }
         else {
-            return nil
+            return StatusModel(uid: "", pan:"" , method:"", orderID: nil, amount: nil)
         }
     }
 }
@@ -188,11 +221,13 @@ extension HomeViewModel {
 // Demo Data
 extension HomeViewModel {
     
-    func getCheckoutDemoData() -> [Unlimint.PaymentMethods] {
+    func prepareCheckoutData() {
         
         checkoutData.append(getCardDemoData())
         checkoutData.append(getCardTokenDemoData())
         checkoutData.append(getPaypalDemoData())
+    }
+    func getCheckoutDemoData() -> [Unlimint.PaymentMethods] {
         return checkoutData
     }
     

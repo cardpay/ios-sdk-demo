@@ -60,8 +60,7 @@ struct HomeView: View {
                 // Buy Button
                 Button {
                     
-                    //  homeViewModel.payWithCardToken = false
-                    
+                    homeViewModel.payWithCardToken = false
                     homeViewModel.authorizationProvider.setup { newtoken in
                         
                         homeViewModel.sheetType = .payment
@@ -183,7 +182,7 @@ struct HomeView: View {
                 
                 
             case .statusView:
-                StatusView(statusModel: homeViewModel.getStatusModel()!)
+                StatusView(statusModel: homeViewModel.getStatusModel()!, isFailedStatus: homeViewModel.failedStatus)
             }
         }
     }

@@ -10,43 +10,88 @@ import SwiftUI
 struct StatusView: View {
     
     @State var statusModel: StatusModel
+    @State var isFailedStatus: Bool
     
     var body: some View {
         
-        VStack (spacing : 25){
+        
+        if isFailedStatus {
             
-            Text("SwiftUISDKTest")
-                .font(.title)
-            
-            HStack {
-               
-                Text("Transation ID")
+            VStack (spacing : 25){
+                
+                Text("SwiftUISDKTest")
+                    .font(.largeTitle)
+                
                 Spacer()
-                Text(statusModel.uid)
-                    .font(.title2)
-            }
-            
-            HStack {
+                
+                Text("Transaction Failed")
+                    .font(.title)
+                    .foregroundColor(.red)
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.largeTitle)
+                    .foregroundColor(.red)
                
-                Text("Payment Method")
+                HStack {
+                   
+//                    Text("Transation ID")
+//                    Spacer()
+//                    Text("")
+//                        .font(.title2)
+                }
+                
                 Spacer()
-                Text(statusModel.method)
-                    .font(.title2)
-            }
-            
-            HStack {
+            } .padding(10)
+        }
+        else {
+           
+            VStack (spacing : 25){
+                
+                Text("SwiftUISDKTest")
+                    .font(.largeTitle)
+                
+                Spacer()
+                
+                Text("Transaction Successful")
+                    .font(.title)
+                    .foregroundColor(.green)
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.largeTitle)
+                    .foregroundColor(.green)
                
-                Text("Pan")
+                HStack {
+                   
+                    Text("Transation ID")
+                    Spacer()
+                    Text(statusModel.uid)
+                        .font(.title2)
+                }
+                
+                HStack {
+                   
+                    Text("Payment Method")
+                    Spacer()
+                    Text(statusModel.method)
+                        .font(.title2)
+                }
+                
+                HStack {
+                   
+                    Text("Pan")
+                    Spacer()
+                    Text(statusModel.pan!)
+                        .font(.title2)
+                }
                 Spacer()
-                Text(statusModel.pan)
-                    .font(.title2)
-            }
-        } .padding(10)
+            } .padding(10)
+        }
+
     }
 }
 
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusView(statusModel: StatusModel(uid: "435343453", pan: "9876", method: "Card", orderID: "3434234", amount: "5.0"))
+        StatusView(statusModel: StatusModel(uid: "435343453", pan: "9876", method: "Card", orderID: "3434234", amount: "5.0"), isFailedStatus: true)
     }
 }
