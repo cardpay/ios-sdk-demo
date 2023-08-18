@@ -25,8 +25,6 @@
 		B3D9DFAB2A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DFAA2A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoTests.swift */; };
 		B3D9DFB52A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DFB42A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITests.swift */; };
 		B3D9DFB72A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DFB62A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITestsLaunchTests.swift */; };
-		B3D9DFC62A2DB6BB005E7CEA /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DFC42A2DB6BB005E7CEA /* Endpoints.swift */; };
-		B3D9DFC72A2DB6BB005E7CEA /* AuthorizationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9DFC52A2DB6BB005E7CEA /* AuthorizationProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +68,6 @@
 		B3D9DFB02A2DB66F005E7CEA /* UnlimintSDKSwiftUI-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnlimintSDKSwiftUI-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D9DFB42A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintSDKSwiftUI_DemoUITests.swift; sourceTree = "<group>"; };
 		B3D9DFB62A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimintSDKSwiftUI_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B3D9DFC42A2DB6BB005E7CEA /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		B3D9DFC52A2DB6BB005E7CEA /* AuthorizationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationProvider.swift; sourceTree = "<group>"; };
 		B3D9DFC92A2DB835005E7CEA /* UnlimintSDK_SwiftUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UnlimintSDK_SwiftUI.xcframework; path = Pods/UnlimintSDK_SwiftUI/UnlimintSDK_SwiftUI.xcframework; sourceTree = "<group>"; };
 		B40E7089AE23F379275E6368 /* Pods-UnlimintSDKSwiftUI-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlimintSDKSwiftUI-Demo.debug.xcconfig"; path = "Target Support Files/Pods-UnlimintSDKSwiftUI-Demo/Pods-UnlimintSDKSwiftUI-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D541C953661711E0524A7A49 /* Pods_UnlimintSDKSwiftUI_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnlimintSDKSwiftUI_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +174,6 @@
 		B3D9DF982A2DB66E005E7CEA /* UnlimintSDKSwiftUI-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				B3D9DFC32A2DB6BB005E7CEA /* Network */,
 				B3B5F6612A8CF92B00367243 /* Model */,
 				B3B5F6642A8CF92B00367243 /* Network */,
 				B3B5F65D2A8CF92B00367243 /* View */,
@@ -212,15 +207,6 @@
 				B3D9DFB62A2DB66F005E7CEA /* UnlimintSDKSwiftUI_DemoUITestsLaunchTests.swift */,
 			);
 			path = "UnlimintSDKSwiftUI-DemoUITests";
-			sourceTree = "<group>";
-		};
-		B3D9DFC32A2DB6BB005E7CEA /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				B3D9DFC42A2DB6BB005E7CEA /* Endpoints.swift */,
-				B3D9DFC52A2DB6BB005E7CEA /* AuthorizationProvider.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,10 +391,8 @@
 				B3B5F66E2A8CF92B00367243 /* NetworkService.swift in Sources */,
 				B3B5F66B2A8CF92B00367243 /* StatusModel.swift in Sources */,
 				B3B5F66C2A8CF92B00367243 /* CardTokenModel.swift in Sources */,
-				B3D9DFC62A2DB6BB005E7CEA /* Endpoints.swift in Sources */,
 				B3B5F66D2A8CF92B00367243 /* Endpoints.swift in Sources */,
 				B3B5F66F2A8CF92B00367243 /* AuthorizationProvider.swift in Sources */,
-				B3D9DFC72A2DB6BB005E7CEA /* AuthorizationProvider.swift in Sources */,
 				B3B5F6692A8CF92B00367243 /* HomeView.swift in Sources */,
 				B3B5F66A2A8CF92B00367243 /* StatusView.swift in Sources */,
 				B3B5F6682A8CF92B00367243 /* HomeViewModel.swift in Sources */,
