@@ -43,9 +43,8 @@ class HomeViewModel : ObservableObject {
         Unlimint.shared.environment = .sandbox
         Unlimint.shared.skipStatusPages = true
         Unlimint.shared.get_card_Binding_Token = self.get_card_Binding_Token
-        
+        themeSetup()
         prepareCheckoutData()
-        
         addEventFailure()
         addEventSuccessful()
     }
@@ -84,8 +83,8 @@ class HomeViewModel : ObservableObject {
                     let pan = String(cardToken.card.maskedPan.suffix(4))
                     let cardHolder = cardToken.card.holder
                     let cardBrand = cardToken.card.cardBrand
-                    let cardAccount = PaymentTokenMethodData.CardAccount(token: token, pan: pan, billingAddress: nil)
-                    
+                    let cardIssuer = cardToken.card.issuer
+                
                     cardTokenData =  PaymentTokenMethodData.init(with: "Card Merchant",
                                                                  paymentMethod: "BANKCARD",
                                                                  customer: .init(homePhone: nil,
@@ -103,7 +102,8 @@ class HomeViewModel : ObservableObject {
                                                                                     isEditable: true, preauth: true),
                                                                  cardAccount: .init(token: token,
                                                                                     pan: pan,
-                                                                                    billingAddress: nil))
+                                                                                    billingAddress: nil,
+                                                                                    cardIssuer: cardIssuer))
                     
                     self.payWithTokenData.removeAll()
                     self.payWithTokenData.append(.cardToken(type: .mastercard, cardTokenData!))
@@ -273,11 +273,11 @@ extension HomeViewModel {
                                                                    note: nil,
                                                                    dynamicDescriptor: nil,
                                                                    transType: nil,
-                                                                   isEditable: false,
+                                                                   isEditable: true,
                                                                    preauth: true),
                                                 cardAccount: .init(token: "a3d85ac0-4268-bb12-a628-f1e13a4988d8",
                                                                    pan: "1235",
-                                                                   billingAddress: nil)))
+                                                                   billingAddress: nil, cardIssuer: "ICICI Bank")))
         
     }
     
@@ -293,7 +293,8 @@ extension HomeViewModel {
                                              note: nil,
                                              dynamicDescriptor: nil,
                                              transType: nil,
-                                             isEditable: true, preauth: true),
+                                             isEditable: false,
+                                             preauth: true),
                           customer: .init(email: "test@unlimint.com")))
         
     }
@@ -302,6 +303,27 @@ extension HomeViewModel {
     func generateRandomOrderID() -> Int {
         
         Int.random(in: 111111..<999999)
+        
+    }
+}
+
+// Setting up theme
+extension HomeViewModel {
+    
+    func themeSetup() {
+        
+//        Unlimint.shared.theme.buttonBackgroundColor = .red
+//        Unlimint.shared.theme.buttonBackgroundColorDisable = .gray
+//        Unlimint.shared.theme.buttonTextColorColor = .white
+//        Unlimint.shared.theme.buttonTextColorColorDarkDisable = .black
+//        Unlimint.shared.theme.cardBackground = .red
+        //Unlimint.shared.theme.cardBackgroundDark = .black
+
+//        Unlimint.shared.theme.cardTextColor = .blue
+//        Unlimint.shared.theme.cardInputTextColor = .blue
+        
+       // Unlimint.shared.theme.addCardText = "key1".localized
+        
         
     }
 }
