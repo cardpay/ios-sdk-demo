@@ -86,7 +86,6 @@ struct StatusView: View {
                 Spacer()
             } .padding(10)
         }
-
     }
 }
 

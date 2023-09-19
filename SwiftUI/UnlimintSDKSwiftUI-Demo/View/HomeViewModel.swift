@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import UnlimintSDK_SwiftUI
 import UnlimintSDK_Core
 
@@ -29,7 +30,7 @@ class HomeViewModel : ObservableObject {
     @Published var testRedirectToPayment = false
     @Published var currency : String = "EUR"
     @Published var isPayment = true
-    @Published var get_card_Binding_Token = true
+    @Published var get_card_Binding_Token = false
     
     var isCardTokenGenerated = false
     var failedStatus = false
@@ -99,7 +100,8 @@ class HomeViewModel : ObservableObject {
                                                                                     note: nil,
                                                                                     dynamicDescriptor: nil,
                                                                                     transType: nil,
-                                                                                    isEditable: true, preauth: true),
+                                                                                    isEditable: true,
+                                                                                    preauth: true),
                                                                  cardAccount: .init(token: token,
                                                                                     pan: pan,
                                                                                     billingAddress: nil,
@@ -312,18 +314,32 @@ extension HomeViewModel {
     
     func themeSetup() {
         
-//        Unlimint.shared.theme.buttonBackgroundColor = .red
+//        Unlimint.shared.theme.buttonBackgroundColor = Color(hex:0xFF5D15)
 //        Unlimint.shared.theme.buttonBackgroundColorDisable = .gray
+//
 //        Unlimint.shared.theme.buttonTextColorColor = .white
 //        Unlimint.shared.theme.buttonTextColorColorDarkDisable = .black
-//        Unlimint.shared.theme.cardBackground = .red
-        //Unlimint.shared.theme.cardBackgroundDark = .black
+//
+//        Unlimint.shared.theme.cardBackground =  Color(hex:0x272C34)
+//
+//        //Unlimint.shared.theme.cardBackgroundDark = .black
+//
+//        Unlimint.shared.theme.cardTextColor = .white
+//        Unlimint.shared.theme.cardInputTextColor = .black
+//        Unlimint.shared.theme.cardInputBackgroundColor = .white
+//
+//        Unlimint.shared.theme.topTitleTextColor = .black
+//        Unlimint.shared.theme.closeButtonTextColor = .blue
+//
+//        Unlimint.shared.theme.pageBackgroundColor = .white
+//
+//        Unlimint.shared.theme.changeAmountBGColor =  Color(hex: 0xe8e8eb)
+//
+//
+//        Unlimint.shared.theme.titleTextColor = .black
+//        Unlimint.shared.theme.titleDetailTextColor = .gray
 
-//        Unlimint.shared.theme.cardTextColor = .blue
-//        Unlimint.shared.theme.cardInputTextColor = .blue
-        
-       // Unlimint.shared.theme.addCardText = "key1".localized
-        
+        //Unlimint.shared.theme.addCardText = "key1".localized
         
     }
 }
