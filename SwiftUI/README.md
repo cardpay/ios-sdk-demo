@@ -40,7 +40,7 @@ use_frameworks!
 
 target 'UnlimintSDKSwiftUI-Demo' do
 
-  pod 'UnlimintSDK_SwiftUI', '2.0.0'
+  pod 'UnlimintSDK_SwiftUI', '2.0.6'
 
 end
 
