@@ -30,7 +30,7 @@ class HomeViewModel : ObservableObject {
     @Published var testRedirectToPayment = false
     @Published var currency : String = "EUR"
     @Published var isPayment = true
-    @Published var get_card_Binding_Token = false
+    @Published var get_card_Binding_Token = true
     
     var isCardTokenGenerated = false
     var failedStatus = false
@@ -42,8 +42,9 @@ class HomeViewModel : ObservableObject {
     init() {
         
         Unlimint.shared.environment = .sandbox
-        Unlimint.shared.skipStatusPages = true
-        Unlimint.shared.get_card_Binding_Token = self.get_card_Binding_Token
+        Unlimint.shared.skipStatusPages = false
+        Unlimint.shared.getCardBindingToken = self.get_card_Binding_Token
+        Unlimint.shared.recurringScheduleType = .sa
         themeSetup()
         prepareCheckoutData()
         addEventFailure()
@@ -69,7 +70,7 @@ class HomeViewModel : ObservableObject {
     private func eventUnlimintSuccess(_ notification: Notification) {
         
         let userInfo = notification.userInfo
-        print(userInfo)
+        print(userInfo ?? [:])
         responseData = userInfo ?? [:]
         
         if userInfo!["UnlimintSDK.method"] as! String == "binding" {
@@ -78,7 +79,6 @@ class HomeViewModel : ObservableObject {
 
                 print(cardToken)
 
-                    
                     let token = cardToken.card.token
                     let cardType = cardToken.card.cardBrand
                     let pan = String(cardToken.card.maskedPan.suffix(4))
@@ -92,7 +92,9 @@ class HomeViewModel : ObservableObject {
                                                                                  workPhone: nil,
                                                                                  email: "test@unlimint.com",
                                                                                  locale: "nil",
-                                                                                 phone: "+91 8750119811"),
+                                                                                 phone: "+91 8750119811",
+                                                                                 ipAddress: nil,
+                                                                                 customerID: nil),
                                                                  merchantOrder: .init(description: "<description>",
                                                                                       id: "\(generateRandomOrderID())"),
                                                                  paymentData: .init(amount: self.price,
@@ -183,7 +185,7 @@ class HomeViewModel : ObservableObject {
                   self.sheetType = .statusView
                   self.failedStatus = true
               }
-          }
+           }
         }
         
         /*
@@ -229,6 +231,7 @@ extension HomeViewModel {
         checkoutData.append(getCardTokenDemoData())
         checkoutData.append(getPaypalDemoData())
     }
+    
     func getCheckoutDemoData() -> [Unlimint.PaymentMethods] {
         return checkoutData
     }
@@ -243,7 +246,9 @@ extension HomeViewModel {
                                         workPhone: nil,
                                         email: "qwer@unlimint.com",
                                         locale: nil,
-                                        phone: "+91 8750119811"),
+                                        phone: "+91 8750119811",
+                                        ipAddress: nil,
+                                        customerID: nil),
                         merchantOrder: .init(description: "<description>", id: "\(generateRandomOrderID())"),
                         paymentData: PaymentData.init(amount: price,
                                                       currency: "EUR",
@@ -256,6 +261,35 @@ extension HomeViewModel {
         
     }
     
+    func getRecurringCardPaymentData() -> Unlimint.PaymentMethods {
+        
+        return
+        
+            .recurringPaymentCard(.init(with: "Facebook Inc",
+                                        paymentMethod: "BANKCARD",
+                                        customer: .init(
+                                                       email: "qwer@unlimint.com",
+                                                       locale: nil,
+                                                       
+                                                       customerID: "123456"),
+                                        merchantOrder: .init(description: "<description>", id: "\(generateRandomOrderID())"),
+                                        paymentData: PaymentData.init(amount: 100,
+                                                                      currency: "EUR",
+                                                                      note: nil,
+                                                                      dynamicDescriptor: nil,
+                                                                      transType: nil,
+                                                                      isEditable: false,
+                                                                      preauth: true),
+                                        cardAccount: nil,
+                                        recurringData: .init(amount: 100,
+                                                             currency: "EUR",
+                                                             contractNumber:"7481592630ARDS",
+                                                             transType: "01",
+                                                             initialAmount: 100,
+                                                             subscriptionStart: "2024-04-22",
+                                                             plan: .init(id: "rf2391UU"))))
+        
+    }
     
     func getCardTokenDemoData() -> Unlimint.PaymentMethods {
         
@@ -267,7 +301,9 @@ extension HomeViewModel {
                                                                 workPhone: nil,
                                                                 email: "test@unlimint.com",
                                                                 locale: "nil",
-                                                                phone: "+91 8750119811"),
+                                                                phone: "+91 8750119811",
+                                                                ipAddress: nil,
+                                                                customerID: nil),
                                                 merchantOrder: .init(description: "<description>",
                                                                      id: "\(generateRandomOrderID())"),
                                                 paymentData: .init(amount: price,
@@ -277,9 +313,41 @@ extension HomeViewModel {
                                                                    transType: nil,
                                                                    isEditable: true,
                                                                    preauth: true),
-                                                cardAccount: .init(token: "a3d85ac0-4268-bb12-a628-f1e13a4988d8",
-                                                                   pan: "1235",
+                                                cardAccount: .init(token: "9cd57184-a7f9-33f6-8cf3-1298054515ac",
+                                                                   pan: "0085",
                                                                    billingAddress: nil, cardIssuer: "ICICI Bank")))
+        
+    }
+    
+    func getRecurringTokenData() -> Unlimint.PaymentMethods {
+        
+        return
+        
+            .recurringCardToken(type: .mastercard, .init(with: "Card Merchant",
+                                                         paymentMethod: "BANKCARD",
+                                                         customer: .init(
+                                                                        email: "test@unlimint.com",
+                                                                         locale: "nil",
+                                                                        customerID: "123456"),
+                                                         merchantOrder: .init(description: "<description>",
+                                                                              id: "\(generateRandomOrderID())"),
+                                                         paymentData: .init(amount: 100,
+                                                                            currency: "EUR",
+                                                                            note: nil,
+                                                                            dynamicDescriptor: nil,
+                                                                            transType: nil,
+                                                                            isEditable: false,
+                                                                            preauth: true),
+                                                         cardAccount: .init(token: "9cd57184-a7f9-33f6-8cf3-1298054515ac",
+                                                                            pan: "0085",
+                                                                            billingAddress: nil, cardIssuer: "ICICI Bank"),
+                                                         recurringData: .init(amount: 100,
+                                                                              currency: "EUR",
+                                                                              contractNumber:"7481592630ARDS",
+                                                                              transType: "01",
+                                                                              initialAmount: 100,
+                                                                              subscriptionStart: "2024-04-22",
+                                                                              plan: .init(id: "rf2391UU"))))
         
     }
     
