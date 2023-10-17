@@ -20,7 +20,7 @@ We strongly recommend to use SDK UI if you don't have PCI DSS certificate.
 
 - iOS 14.0+
 - Swift 5.3
-  - Xcode 14.0+
+  - Xcode 15.0+
 - CocoaPods 1.10.0+ (if you use)
 
 ## Installation
@@ -29,7 +29,7 @@ UnlimintSDK is available through [CocoaPods](https://cocoapods.org)
 
 #### Swift 5.x
 
-For Unlimint SDK UI
+For Unlimint SDK SwiftUI
 ```ruby
 
 source 'https://github.com/CocoaPods/Specs.git'
@@ -40,7 +40,7 @@ use_frameworks!
 
 target 'UnlimintSDKSwiftUI-Demo' do
 
-  pod 'UnlimintSDK_SwiftUI', '2.0.6'
+  pod 'UnlimintSDK_SwiftUI', '2.0.7'
 
 end
 
@@ -78,4 +78,3 @@ end
 ```
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
-
