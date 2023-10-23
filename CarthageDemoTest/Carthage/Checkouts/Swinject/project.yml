@@ -1,0 +1,46 @@
+name: Swinject
+options:
+  bundleIdPrefix: com.el-eleven
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+  deploymentTarget:
+    macOS: '10.13'
+    tvOS: '11.0'
+    iOS: '11.0'
+    watchOS: '4.0'
+fileGroups:
+  - Playgrounds/Sample-iOS.playground
+targets:
+  Swinject:
+    type: framework
+    platform: [macOS, iOS, tvOS, watchOS]
+    platformSuffix: -${platform}
+    settings:
+      base:
+        APPLICATION_EXTENSION_API_ONLY: 'YES'
+        BUILD_LIBRARY_FOR_DISTRIBUTION: 'YES'
+        RUN_DOCUMENTATION_COMPILER: 'YES'
+    scheme:
+      testTargets:
+        - SwinjectTests-${platform}
+    sources:
+      - path: Sources
+        excludes: ["*.erb"]
+    postCompileScripts:
+      - script: >
+          if which swiftlint >/dev/null; then
+            swiftlint
+          else
+            echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+          fi
+        name: Swiftlint
+  SwinjectTests:
+    type: bundle.unit-test
+    platform: [macOS, iOS, tvOS, watchOS]
+    platformSuffix: -${platform}
+    scheme: {}
+    sources:
+      - Tests/SwinjectTests
+    dependencies:
+      - target: Swinject-${platform}

@@ -1,0 +1,6 @@
+binary "https://github.com/cardpay/ios-sdk-podspec/releases/download/2.0.8/UnlimintCore.json"
+github "Alamofire/Alamofire" "5.8.0"
+github "Moya/Moya" "15.0.3"
+github "ReactiveCocoa/ReactiveSwift" "6.7.0"
+github "ReactiveX/RxSwift" "6.6.0"
+github "Swinject/Swinject" "2.8.4"
