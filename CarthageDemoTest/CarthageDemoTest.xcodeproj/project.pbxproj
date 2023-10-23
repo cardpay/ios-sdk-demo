@@ -17,6 +17,7 @@
 		B32CE5832AE681C00002805F /* UnlimintSDK_SwiftUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32CE57A2AE681C00002805F /* UnlimintSDK_SwiftUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B32CE5842AE681C00002805F /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32CE57B2AE681C00002805F /* Alamofire.xcframework */; };
 		B32CE5852AE681C00002805F /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32CE57B2AE681C00002805F /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B32CE5872AE6A0FC0002805F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B32CE5862AE6A0FC0002805F /* README.md */; };
 		B3CD760F2AE106230067044B /* CarthageDemoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD760E2AE106230067044B /* CarthageDemoTestApp.swift */; };
 		B3CD76112AE106230067044B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD76102AE106230067044B /* ContentView.swift */; };
 		B3CD76132AE106240067044B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CD76122AE106240067044B /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		B32CE5792AE681C00002805F /* UnlimintSDK_Core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UnlimintSDK_Core.xcframework; path = Carthage/Build/UnlimintSDK_Core.xcframework; sourceTree = "<group>"; };
 		B32CE57A2AE681C00002805F /* UnlimintSDK_SwiftUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UnlimintSDK_SwiftUI.xcframework; path = Carthage/Build/UnlimintSDK_SwiftUI.xcframework; sourceTree = "<group>"; };
 		B32CE57B2AE681C00002805F /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		B32CE5862AE6A0FC0002805F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B3CD760B2AE106230067044B /* CarthageDemoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarthageDemoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CD760E2AE106230067044B /* CarthageDemoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageDemoTestApp.swift; sourceTree = "<group>"; };
 		B3CD76102AE106230067044B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		B3CD76022AE106230067044B = {
 			isa = PBXGroup;
 			children = (
+				B32CE5862AE6A0FC0002805F /* README.md */,
 				B3CD760D2AE106230067044B /* CarthageDemoTest */,
 				B3CD760C2AE106230067044B /* Products */,
 				B3CD761C2AE10A1A0067044B /* Frameworks */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32CE5872AE6A0FC0002805F /* README.md in Resources */,
 				B3CD76162AE106240067044B /* Preview Assets.xcassets in Resources */,
 				B3CD76132AE106240067044B /* Assets.xcassets in Resources */,
 			);
