@@ -22,7 +22,8 @@ struct CardToken: Codable {
 
 // MARK: - Card
 struct Card: Codable {
-    let acctType, cardBrand, cardType, expiration: String
+    let acctType : String?
+    let cardBrand, cardType, expiration: String
     let holder, issuer, issuingCountryCode, maskedPan: String
     let token: String
     let filingID: JSONNull?

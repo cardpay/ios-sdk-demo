@@ -330,7 +330,7 @@ extension HomeViewModel {
                                                                          locale: "nil",
                                                                         customerID: "123456"),
                                                          merchantOrder: .init(description: "<description>",
-                                                                              id: "\(generateRandomOrderID())"),
+                                                                              id: "\(generateRandomOrderID())"), 
                                                          paymentData: .init(amount: 100,
                                                                             currency: "EUR",
                                                                             note: nil,
@@ -382,32 +382,32 @@ extension HomeViewModel {
     
     func themeSetup() {
         
-//        Unlimint.shared.theme.buttonBackgroundColor = Color(hex:0xFF5D15)
-//        Unlimint.shared.theme.buttonBackgroundColorDisable = .gray
-//
-//        Unlimint.shared.theme.buttonTextColorColor = .white
-//        Unlimint.shared.theme.buttonTextColorColorDarkDisable = .black
-//
-//        Unlimint.shared.theme.cardBackground =  Color(hex:0x272C34)
-//
-//        //Unlimint.shared.theme.cardBackgroundDark = .black
-//
-//        Unlimint.shared.theme.cardTextColor = .white
-//        Unlimint.shared.theme.cardInputTextColor = .black
-//        Unlimint.shared.theme.cardInputBackgroundColor = .white
-//
-//        Unlimint.shared.theme.topTitleTextColor = .black
-//        Unlimint.shared.theme.closeButtonTextColor = .blue
-//
-//        Unlimint.shared.theme.pageBackgroundColor = .white
-//
-//        Unlimint.shared.theme.changeAmountBGColor =  Color(hex: 0xe8e8eb)
-//
-//
-//        Unlimint.shared.theme.titleTextColor = .black
-//        Unlimint.shared.theme.titleDetailTextColor = .gray
+        Unlimint.shared.theme.buttonBackgroundColor = Color(hex:0xFF5D15)
+        Unlimint.shared.theme.buttonBackgroundColorDisable = .gray
 
-        //Unlimint.shared.theme.addCardText = "key1".localized
+        Unlimint.shared.theme.buttonTextColorColor = .white
+        Unlimint.shared.theme.buttonTextColorColorDarkDisable = .black
+
+        Unlimint.shared.theme.cardBackground =  Color(hex:0x272C34)
+
+        //Unlimint.shared.theme.cardBackgroundDark = .black
+
+        Unlimint.shared.theme.cardTextColor = .white
+        Unlimint.shared.theme.cardInputTextColor = .black
+        Unlimint.shared.theme.cardInputBackgroundColor = .white
+
+        Unlimint.shared.theme.topTitleTextColor = .black
+        Unlimint.shared.theme.closeButtonTextColor = .blue
+
+        Unlimint.shared.theme.pageBackgroundColor = .white
+
+        Unlimint.shared.theme.changeAmountBGColor =  Color(hex: 0xe8e8eb)
+
+
+        Unlimint.shared.theme.titleTextColor = .black
+        Unlimint.shared.theme.titleDetailTextColor = .gray
+
+       // Unlimint.shared.theme.addCardText = "key1".localized
         
     }
 }

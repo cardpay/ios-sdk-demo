@@ -13,6 +13,9 @@ enum SheetType {
     case payment
     case bind
     case statusView
+    case recurringCardToken
+    case recurringCardPayment
+
     //case none
 }
 
@@ -27,94 +30,127 @@ struct HomeView: View {
     
     var body: some View {
         
+//        ScrollView (.vertical,  showsIndicators: false){
+            
         VStack {
             
-            
-            VStack(alignment: .leading) {
-                
-                Image("icon_boots")
-                    .resizable()
-                    .scaledToFit()
-                
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Casual Sneakers")
-                        .font(.title2)
+                VStack(alignment: .leading) {
                     
-                    Text("Easy to get on and wear all day. Keeping you comfortable as you run. Lightweight and responsive, breathable, and secure.")
-                        .font(.footnote)
+                    Image("icon_boots")
+                        .resizable()
+                        .scaledToFit()
                     
-                    Text("")
-                    
-                    HStack {
-                        Text("Price:")
+                    VStack(alignment: .leading, spacing: 15) {
+                        Text("Casual Sneakers")
+                            .font(.title2)
+                        
+                        Text("Easy to get on and wear all day. Keeping you comfortable as you run. Lightweight and responsive, breathable, and secure.")
                             .font(.footnote)
-                            .foregroundColor(Color.gray)
                         
-                        Text((homeViewModel.price.toPrice() ?? "0") + " \(homeViewModel.currency)")
-                            .font(.footnote)
-                    }
-                }
-                .padding()
-                Spacer()
-                
-                // Buy Button
-                Button {
-                    
-                    homeViewModel.payWithCardToken = false
-                    homeViewModel.authorizationProvider.setup { newtoken in
+                        Text("")
                         
-                        homeViewModel.sheetType = .payment
-                        homeViewModel.token = newtoken
-                        homeViewModel.showSheet = true
+                        HStack {
+                            Text("Price:")
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                            
+                            Text((homeViewModel.price.toPrice() ?? "0") + " \(homeViewModel.currency)")
+                                .font(.footnote)
+                        }
                     }
+                    .padding()
+                    Spacer()
                     
-                } label: {
-                    
-                    ZStack {
-                        
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .frame(maxHeight: 50)
-                            .accentColor(Color("AccentColor"))
-                            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                        
-                        Text("Pay")
-                            .foregroundColor(.blue)
-                        // .background(Color.clear)
-                            .accentColor(.black)
-                    }
-                }
-                
-                
-                // Link a Card
-                Button {
-                    
-                    homeViewModel.sheetType = .bind
-                    homeViewModel.authorizationProvider.setup { newtoken in
-                        homeViewModel.token = newtoken
-                        homeViewModel.showSheet = true
-                    }
-                    
-                } label: {
-                    
-                    ZStack {
-                        
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .frame(maxHeight: 50)
-                            .foregroundColor(.clear)
-                        Text("Link a card")
-                            .underline()
-                            .foregroundColor(.blue)
-                        //.background(.clear)
-                    }
-                }
-                
-                
-                if homeViewModel.isCardTokenGenerated {
-                    
+                    // Buy Button
                     Button {
                         
-                        homeViewModel.sheetType = .payment
-                        homeViewModel.payWithCardToken = true
+                        homeViewModel.payWithCardToken = false
+                        homeViewModel.authorizationProvider.setup { newtoken in
+                            
+                            homeViewModel.sheetType = .payment
+                            homeViewModel.token = newtoken
+                            homeViewModel.showSheet = true
+                        }
+                        
+                    } label: {
+                        
+                        ZStack {
+                            
+                            RoundedRectangle(cornerRadius: 5.0)
+                                .frame(maxHeight: 45)
+                                .accentColor(Color("AccentColor"))
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                            
+                            Text("Pay")
+                                .foregroundColor(.blue)
+                            // .background(Color.clear)
+                                .accentColor(.black)
+                        }
+                    }
+                    
+                    // Recurring Pay with Card
+                    Button {
+                        
+                        homeViewModel.payWithCardToken = false
+                        homeViewModel.authorizationProvider.setup { newtoken in
+                            
+                            DispatchQueue.main.async {
+                                homeViewModel.sheetType = .recurringCardPayment
+                                homeViewModel.token = newtoken
+                                homeViewModel.showSheet = true
+                            }
+                        }
+                        
+                    } label: {
+                        
+                        ZStack {
+                            
+                            RoundedRectangle(cornerRadius: 5.0)
+                                .frame(maxHeight: 45)
+                                .accentColor(Color("AccentColor"))
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                            
+                            Text("Recurring Pay with Card")
+                                .foregroundColor(.blue)
+                            // .background(Color.clear)
+                                .accentColor(.black)
+                        }
+                    }
+                    
+                    // Recurring Pay with Token
+                    Button {
+                        
+                        homeViewModel.payWithCardToken = false
+                        homeViewModel.authorizationProvider.setup { newtoken in
+                            
+                            DispatchQueue.main.async {
+                                homeViewModel.sheetType = .recurringCardToken
+                                homeViewModel.token = newtoken
+                                homeViewModel.showSheet = true
+                            }
+                        }
+                        
+                    } label: {
+                        
+                        ZStack {
+                            
+                            RoundedRectangle(cornerRadius: 5.0)
+                                .frame(maxHeight: 45)
+                                .accentColor(Color("AccentColor"))
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                            
+                            Text("Recurring Pay with Token")
+                                .foregroundColor(.blue)
+                            // .background(Color.clear)
+                                .accentColor(.black)
+                        }
+                    }
+                    
+                    
+                    // Link a Card
+                    Button {
+                        
+                        homeViewModel.sheetType = .bind
                         homeViewModel.authorizationProvider.setup { newtoken in
                             homeViewModel.token = newtoken
                             homeViewModel.showSheet = true
@@ -123,18 +159,44 @@ struct HomeView: View {
                     } label: {
                         
                         ZStack {
+                            
                             RoundedRectangle(cornerRadius: 5.0)
-                                .frame(maxHeight: 50)
+                                .frame(maxHeight: 45)
                                 .foregroundColor(.clear)
-                            Text("Pay with card Token \(homeViewModel.getPan())")
+                            Text("Link a card")
                                 .underline()
                                 .foregroundColor(.blue)
+                            //.background(.clear)
+                        }
+                    }
+                    
+                    
+                    if homeViewModel.isCardTokenGenerated {
+                        
+                        Button {
+                            
+                            homeViewModel.sheetType = .payment
+                            homeViewModel.payWithCardToken = true
+                            homeViewModel.authorizationProvider.setup { newtoken in
+                                homeViewModel.token = newtoken
+                                homeViewModel.showSheet = true
+                            }
+                            
+                        } label: {
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5.0)
+                                    .frame(maxHeight: 50)
+                                    .foregroundColor(.clear)
+                                Text("Pay with card Token \(homeViewModel.getPan())")
+                                    .underline()
+                                    .foregroundColor(.blue)
+                            }
                         }
                     }
                 }
             }
-            
-        }
+//        }
         
         .sheet(isPresented: $homeViewModel.showSheet) {
             
@@ -183,6 +245,10 @@ struct HomeView: View {
                 
             case .statusView:
                 StatusView(statusModel: homeViewModel.getStatusModel()!, isFailedStatus: homeViewModel.failedStatus)
+            case .recurringCardToken:
+                Unlimint.shared.recuringPayment(for: homeViewModel.token, with: [homeViewModel.getRecurringTokenData()])
+            case .recurringCardPayment:
+                Unlimint.shared.recuringPayment(for: homeViewModel.token, with: [homeViewModel.getRecurringCardPaymentData()])
             }
         }
     }
