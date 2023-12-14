@@ -17,7 +17,12 @@ public struct PaymentData: Codable
 Initializer
 
 ``` swift
-public init(amount: Decimal, currency: String, note: String?, dynamicDescriptor: String?, transType: String?)
+    public init(amount: Decimal,
+                currency: String,
+                note: String?,
+                dynamicDescriptor: String?,
+                transType: String?,
+                isEditable: Bool = false)
 ```
 
 ## Properties
@@ -61,6 +66,15 @@ Identifies the type of transaction being authenticated.
 
 ``` swift
 let transType: String?
+```
+
+
+### `isEditable`
+
+If want to give change amount make it true. default is false in initializer
+
+``` swift
+public var isEditable: Bool
 ```
 
 Values accepted:
